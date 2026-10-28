@@ -1,0 +1,2233 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for HarnMaster 3.5E on Fantasy Grounds Unity">
+      
+      
+        <meta name="author" content="Mephisto">
+      
+      
+        <link rel="canonical" href="https://fgmephisto.github.io/HarnMasterPublic/status-effects-reference/">
+      
+      
+        <link rel="prev" href="../combat-resolution/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Status Effects & Conditions - HarnMaster 3.5E Ruleset</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#harnmaster-status-effects-conditions-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="HarnMaster 3.5E Ruleset" class="md-header__button md-logo" aria-label="HarnMaster 3.5E Ruleset" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HarnMaster 3.5E Ruleset
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Status Effects & Conditions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FGMephisto/HarnMasterPublic" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FGMephisto/HarnMasterPublic
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../user-manual/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  User Manual
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../combat-resolution/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Combat Resolution
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Status Effects & Conditions
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="HarnMaster 3.5E Ruleset" class="md-nav__button md-logo" aria-label="HarnMaster 3.5E Ruleset" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    HarnMaster 3.5E Ruleset
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FGMephisto/HarnMasterPublic" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FGMephisto/HarnMasterPublic
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combat-resolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Combat Resolution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status Effects & Conditions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status Effects & Conditions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-physical-combat-trauma-status-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Physical Combat &amp; Trauma Status Effects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Physical Combat &amp; Trauma Status Effects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consciousness-shock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consciousness &amp; Shock
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobility-balance-posture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobility, Balance &amp; Posture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wounds-bleeding-crippling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wounds, Bleeding &amp; Crippling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physiological-environmental-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physiological &amp; Environmental Conditions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#morale-combat-mindsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Morale &amp; Combat Mindsets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-esoteric-psionic-status-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Esoteric &amp; Psionic Status Effects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-arcane-magical-status-effects-harnmaster-magic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Arcane Magical Status Effects (HarnMaster Magic)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Arcane Magical Status Effects (HarnMaster Magic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lyahvi-air-light-illusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyahvi (Air / Light / Illusion)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peleahn-fire-heat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Peleahn (Fire / Heat)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jmorvi-metal-mineral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jmorvi (Metal / Mineral)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fyvria-earth-flora-fauna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fyvria (Earth / Flora / Fauna)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#odivshe-water-cold-shadow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Odivshe (Water / Cold / Shadow)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savorya-mind-spirit-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Savorya (Mind / Spirit / Knowledge)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gray-neutral-magic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gray / Neutral Magic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-divine-invocations-miracles-harnmaster-religion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Divine Invocations &amp; Miracles (HarnMaster Religion)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Divine Invocations &amp; Miracles (HarnMaster Religion)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-church-rituals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Church Rituals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agrik-fire-war-cruelty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agrik (Fire, War, Cruelty)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#halea-wealth-pleasure-intrigue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Halea (Wealth, Pleasure, Intrigue)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ilvir-creation-ivashu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ilvir (Creation, Ivashu)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#larani-honor-chivalry-war" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Larani (Honor, Chivalry, War)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#morgath-death-undead-chaos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Morgath (Death, Undead, Chaos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naveh-shadows-assassination-night" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naveh (Shadows, Assassination, Night)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peoni-healing-agriculture-mercy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Peoni (Healing, Agriculture, Mercy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sarajin-battle-honor-frost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sarajin (Battle, Honor, Frost)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-knor-knowledge-riddles-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save-K'nor (Knowledge, Riddles, Order)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#siem-dreams-astral-mystery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Siem (Dreams, Astral, Mystery)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-fgu-automation-effect-string-master-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. FGU Automation &amp; Effect String Master Matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-physical-combat-trauma-status-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Physical Combat &amp; Trauma Status Effects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Physical Combat &amp; Trauma Status Effects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consciousness-shock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consciousness &amp; Shock
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobility-balance-posture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobility, Balance &amp; Posture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wounds-bleeding-crippling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wounds, Bleeding &amp; Crippling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physiological-environmental-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physiological &amp; Environmental Conditions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#morale-combat-mindsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Morale &amp; Combat Mindsets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-esoteric-psionic-status-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Esoteric &amp; Psionic Status Effects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-arcane-magical-status-effects-harnmaster-magic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Arcane Magical Status Effects (HarnMaster Magic)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Arcane Magical Status Effects (HarnMaster Magic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lyahvi-air-light-illusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lyahvi (Air / Light / Illusion)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peleahn-fire-heat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Peleahn (Fire / Heat)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jmorvi-metal-mineral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jmorvi (Metal / Mineral)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fyvria-earth-flora-fauna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fyvria (Earth / Flora / Fauna)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#odivshe-water-cold-shadow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Odivshe (Water / Cold / Shadow)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savorya-mind-spirit-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Savorya (Mind / Spirit / Knowledge)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gray-neutral-magic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gray / Neutral Magic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-divine-invocations-miracles-harnmaster-religion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Divine Invocations &amp; Miracles (HarnMaster Religion)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Divine Invocations &amp; Miracles (HarnMaster Religion)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-church-rituals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Church Rituals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agrik-fire-war-cruelty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agrik (Fire, War, Cruelty)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#halea-wealth-pleasure-intrigue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Halea (Wealth, Pleasure, Intrigue)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ilvir-creation-ivashu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ilvir (Creation, Ivashu)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#larani-honor-chivalry-war" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Larani (Honor, Chivalry, War)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#morgath-death-undead-chaos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Morgath (Death, Undead, Chaos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naveh-shadows-assassination-night" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naveh (Shadows, Assassination, Night)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peoni-healing-agriculture-mercy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Peoni (Healing, Agriculture, Mercy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sarajin-battle-honor-frost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sarajin (Battle, Honor, Frost)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-knor-knowledge-riddles-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save-K'nor (Knowledge, Riddles, Order)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#siem-dreams-astral-mystery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Siem (Dreams, Astral, Mystery)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-fgu-automation-effect-string-master-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. FGU Automation &amp; Effect String Master Matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="harnmaster-status-effects-conditions-reference">HarnMaster Status Effects &amp; Conditions Reference<a class="headerlink" href="#harnmaster-status-effects-conditions-reference" title="Permanent link">&para;</a></h1>
+<p>This document provides a comprehensive canonical compendium of status effects, conditions, trauma states, afflictions, and enchantments in <strong>HarnMaster (Third Edition / 3.5E)</strong>, synthesized from:
+- <strong>HarnMaster Core Rules (3e)</strong>
+- <strong>HarnMaster Magic (Shek-Pvar)</strong>
+- <strong>HarnMaster Religion (Libram of the Pantheon)</strong></p>
+<p>It includes standard rules mechanics, resistance tests (Saving Throws), durations, and exact <strong>Fantasy Grounds Unity (FGU)</strong> effect strings for automation.</p>
+<hr />
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#1-physical-combat--trauma-status-effects">Physical Combat &amp; Trauma Status Effects</a></li>
+<li><a href="#consciousness--shock">Consciousness &amp; Shock</a></li>
+<li><a href="#mobility-balance--posture">Mobility, Balance &amp; Posture</a></li>
+<li><a href="#wounds-bleeding--crippling">Wounds, Bleeding &amp; Crippling</a></li>
+<li><a href="#physiological--environmental-conditions">Physiological &amp; Environmental Conditions</a></li>
+<li><a href="#morale--combat-mindsets">Morale &amp; Combat Mindsets</a></li>
+<li><a href="#2-esoteric--psionic-status-effects">Esoteric &amp; Psionic Status Effects</a></li>
+<li><a href="#3-arcane-magical-status-effects-harnmaster-magic">Arcane Magical Status Effects (HarnMaster Magic)</a></li>
+<li><a href="#lyahvi-air--light--illusion">Lyahvi (Air / Light / Illusion)</a></li>
+<li><a href="#peleahn-fire--heat">Peleahn (Fire / Heat)</a></li>
+<li><a href="#jmorvi-metal--mineral">Jmorvi (Metal / Mineral)</a></li>
+<li><a href="#fyvria-earth--flora--fauna">Fyvria (Earth / Flora / Fauna)</a></li>
+<li><a href="#odivshe-water--cold--shadow">Odivshe (Water / Cold / Shadow)</a></li>
+<li><a href="#savorya-mind--spirit--knowledge">Savorya (Mind / Spirit / Knowledge)</a></li>
+<li><a href="#gray--neutral-magic">Gray / Neutral Magic</a></li>
+<li><a href="#4-divine-invocations--miracles-harnmaster-religion">Divine Invocations &amp; Miracles (HarnMaster Religion)</a></li>
+<li><a href="#common-church-rituals">Common Church Rituals</a></li>
+<li><a href="#agrik-fire-war-cruelty">Agrik (Fire, War, Cruelty)</a></li>
+<li><a href="#halea-wealth-pleasure-intrigue">Halea (Wealth, Pleasure, Intrigue)</a></li>
+<li><a href="#ilvir-creation-ivashu">Ilvir (Creation, Ivashu)</a></li>
+<li><a href="#larani-honor-chivalry-war">Larani (Honor, Chivalry, War)</a></li>
+<li><a href="#morgath-death-undead-chaos">Morgath (Death, Undead, Chaos)</a></li>
+<li><a href="#naveh-shadows-assassination-night">Naveh (Shadows, Assassination, Night)</a></li>
+<li><a href="#peoni-healing-agriculture-mercy">Peoni (Healing, Agriculture, Mercy)</a></li>
+<li><a href="#sarajin-battle-honor-frost">Sarajin (Battle, Honor, Frost)</a></li>
+<li><a href="#save-knor-knowledge-riddles-order">Save-K'nor (Knowledge, Riddles, Order)</a></li>
+<li><a href="#siem-dreams-astral-mystery">Siem (Dreams, Astral, Mystery)</a></li>
+<li><a href="#5-fgu-automation--effect-string-master-matrix">FGU Automation &amp; Effect String Master Matrix</a></li>
+</ol>
+<hr />
+<h2 id="1-physical-combat-trauma-status-effects">1. Physical Combat &amp; Trauma Status Effects<a class="headerlink" href="#1-physical-combat-trauma-status-effects" title="Permanent link">&para;</a></h2>
+<p>These conditions stem from physical injuries, tactical combat maneuvers, fatigue, infections, and environmental hazards.</p>
+<h3 id="consciousness-shock">Consciousness &amp; Shock<a class="headerlink" href="#consciousness-shock" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Status Effect</th>
+<th style="text-align: left;">Source / Trigger</th>
+<th style="text-align: left;">Rule Mechanics</th>
+<th style="text-align: left;">Duration &amp; Recovery</th>
+<th style="text-align: left;">FGU Effect Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Shock Check</strong></td>
+<td style="text-align: left;">Taking any injury</td>
+<td style="text-align: left;">Roll 1d6 per Universal Penalty (UP). If total exceeds <strong>Endurance</strong>, character collapses.</td>
+<td style="text-align: left;">Instantaneous trigger</td>
+<td style="text-align: left;"><code>[SHOCK CHECK]</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Unconscious</strong></td>
+<td style="text-align: left;">Failed Shock Roll or Trauma</td>
+<td style="text-align: left;">Character is helpless. Drops held items, falls Prone, cannot make actions or tests. Opponents gain automatic Tactical Advantage. Defenses are ignored (<code>DEF: Ignore</code>), resulting in uncontested strikes.</td>
+<td style="text-align: left;">1 minute recovery checks (Shock recovery table); then 10 min checks.</td>
+<td style="text-align: left;"><code>Unconscious; Prone; DEF: Ignore</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Incapacitated</strong></td>
+<td style="text-align: left;">Passing first recovery check from Unconscious</td>
+<td style="text-align: left;">Transitional recovery state. Must immediately roll a second Shock Check: Pass = full recovery; Fail = degrades into Shock. Initiative penalized by -10.</td>
+<td style="text-align: left;">Instant / 1 round</td>
+<td style="text-align: left;"><code>Incapacitated; INIT: -10</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Shock (Medical State)</strong></td>
+<td style="text-align: left;">Degraded from Incapacitated or Trauma threshold</td>
+<td style="text-align: left;">Critical state with Healing Rate H5 (no injury levels). Requires a Shock Recovery roll every <strong>4 hours</strong> (Target = HR × END). Reaches H6 = recovered; H0 = death.</td>
+<td style="text-align: left;">4-hour checks until H6 or death</td>
+<td style="text-align: left;"><code>Shock; CHECK: -20</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mobility-balance-posture">Mobility, Balance &amp; Posture<a class="headerlink" href="#mobility-balance-posture" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Status Effect</th>
+<th style="text-align: left;">Source / Trigger</th>
+<th style="text-align: left;">Rule Mechanics</th>
+<th style="text-align: left;">Duration &amp; Recovery</th>
+<th style="text-align: left;">FGU Effect Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Stumble</strong></td>
+<td style="text-align: left;">Leg injury (S2+), Knockback, sudden terrain shift</td>
+<td style="text-align: left;">Roll <strong>Agility</strong> check (modified by UP). Failure causes loss of balance: character drops to <strong>Prone</strong>, suffers Tactical Disadvantage.</td>
+<td style="text-align: left;">1 round (until character stands)</td>
+<td style="text-align: left;"><code>Stumble; Prone</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fumble</strong></td>
+<td style="text-align: left;">Arm/Shoulder injury (S2+), Wild attack result</td>
+<td style="text-align: left;">Roll <strong>Dexterity</strong> check. Failure causes weapon or shield to be dropped, misdirected, or damaged.</td>
+<td style="text-align: left;">Instantaneous</td>
+<td style="text-align: left;"><code>Fumble</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Prone (Knockdown)</strong></td>
+<td style="text-align: left;">Result of Stumble, tackle, or impact</td>
+<td style="text-align: left;">Character is on the ground. Suffers <strong>-20 EML</strong> on attacks and defenses (<code>ATK: -20; DEF: -20</code>). Standing opponents striking a prone target gain <strong>+20 EML</strong>. Costs half movement to stand.</td>
+<td style="text-align: left;">Until standing (requires move action)</td>
+<td style="text-align: left;"><code>Prone; ATK: -20; DEF: -20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Knockback</strong></td>
+<td style="text-align: left;">Effective blunt/physical impact &gt; Strength</td>
+<td style="text-align: left;">Character is forced backward 1 hex (5 ft) per threshold. Must make an immediate <strong>Stumble Roll</strong>.</td>
+<td style="text-align: left;">Instantaneous</td>
+<td style="text-align: left;"><code>Knockback: 1 hex</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Disarmed</strong></td>
+<td style="text-align: left;">Tactical maneuver or critical fumble</td>
+<td style="text-align: left;">Weapon is dislodged, knocked away, or pinned. Character must draw another weapon or fight unarmed.</td>
+<td style="text-align: left;">Until retrieved or switched</td>
+<td style="text-align: left;"><code>Disarmed</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Restrained / Grappled</strong></td>
+<td style="text-align: left;">Grapple, entanglement, pinning</td>
+<td style="text-align: left;">Move reduced to 0. Suffers <strong>-20 EML</strong> on non-grapple actions and defenses. Opponents gain <strong>+20 EML</strong> against the restrained target.</td>
+<td style="text-align: left;">Until broken via STR or AGL contest</td>
+<td style="text-align: left;"><code>Restrained; ATK: -20; DEF: -20</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="wounds-bleeding-crippling">Wounds, Bleeding &amp; Crippling<a class="headerlink" href="#wounds-bleeding-crippling" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Status Effect</th>
+<th style="text-align: left;">Source / Trigger</th>
+<th style="text-align: left;">Rule Mechanics</th>
+<th style="text-align: left;">Duration &amp; Recovery</th>
+<th style="text-align: left;">FGU Effect Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Bleeder (Bloodloss)</strong></td>
+<td style="text-align: left;">Grievous wound (G4, G5) from Blunt, Edge, or Point</td>
+<td style="text-align: left;">Accumulates <strong>1 Bloodloss Point (1 BP)</strong> every minute. BPs act as a cumulative injury. If total BPs exceed <strong>Endurance</strong>, victim dies of exsanguination.</td>
+<td style="text-align: left;">Continuous until treated (Tourniquet, Pressure, Cauterization, Magic)</td>
+<td style="text-align: left;"><code>Bleeding: 1 BP/min</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Limb Crippled / Unusable</strong></td>
+<td style="text-align: left;">Grievous injury (G4, G5) to arm, leg, wing, or tail</td>
+<td style="text-align: left;">Limb is completely non-functional. Leg: crawl or crutch (half Move); Arm: cannot hold items or parry. Biped with 1 bad leg crawls; with 2 bad legs immobilized.</td>
+<td style="text-align: left;">Until wound heals to M1</td>
+<td style="text-align: left;"><code>Crippled Limb; CHECK: -20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Amputation / Severed Limb</strong></td>
+<td style="text-align: left;">Grievous Edge strike to extremity</td>
+<td style="text-align: left;">Body part is severed if damage roll exceeds 1/10th body weight. Automatically becomes a <strong>G5 wound</strong>, causes automatic Stumble/Fumble, and creates an immediate <strong>Bleeder</strong>.</td>
+<td style="text-align: left;">Permanent</td>
+<td style="text-align: left;"><code>Amputated; Bleeding: 1 BP/min; CHECK: -30</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Blinded (Single Eye)</strong></td>
+<td style="text-align: left;">Puncture/Slash to eye location (S2+)</td>
+<td style="text-align: left;">Loss of binocular vision. Permanent -20 EML on missile weapons, visual awareness, and depth perception.</td>
+<td style="text-align: left;">Permanent unless magically restored</td>
+<td style="text-align: left;"><code>Blinded Eye; CHECK: -20 eyesight</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Blinded (Complete)</strong></td>
+<td style="text-align: left;">Both eyes destroyed, flash spells, venom</td>
+<td style="text-align: left;">Total loss of sight. Suffers <strong>-40 EML</strong> on attacks and <strong>-20 EML</strong> on defenses (reliant on acoustic awareness). Movement halved; tactile awareness tests required.</td>
+<td style="text-align: left;">Permanent or spell duration</td>
+<td style="text-align: left;"><code>Blinded; ATK: -40; DEF: -20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Deafened</strong></td>
+<td style="text-align: left;">Skull/Ear trauma, thunder spells/miracles</td>
+<td style="text-align: left;">Inability to hear auditory cues. Automatic failure on Hearing tests. -20 EML on surprise checks; verbal communication impossible.</td>
+<td style="text-align: left;">Medical recovery or spell duration</td>
+<td style="text-align: left;"><code>Deafened; CHECK: -30 hearing</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="physiological-environmental-conditions">Physiological &amp; Environmental Conditions<a class="headerlink" href="#physiological-environmental-conditions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Status Effect</th>
+<th style="text-align: left;">Source / Trigger</th>
+<th style="text-align: left;">Rule Mechanics</th>
+<th style="text-align: left;">Duration &amp; Recovery</th>
+<th style="text-align: left;">FGU Effect Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Fatigue (FL)</strong></td>
+<td style="text-align: left;">Exertion, heavy armor, heat, spells</td>
+<td style="text-align: left;">Each Fatigue Level adds <strong>+1 to Universal Penalty (UP)</strong> (-10% to all skills and +1d6 to Shock rolls). Recorded directly in the sheet/CT <strong>FT</strong> box.</td>
+<td style="text-align: left;">1 FL recovers per 10 minutes of resting</td>
+<td style="text-align: left;">Native <strong>FT</strong> Box: <code>+1 FT per FL</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Encumbered</strong></td>
+<td style="text-align: left;">Load exceeds carrying capacity</td>
+<td style="text-align: left;">Encumbrance Penalty (EP) directly subtracts from all physical skills (Move, Dodge, Acrobatics, Combat). Move rate halved or quartered.</td>
+<td style="text-align: left;">Until load is dropped or adjusted</td>
+<td style="text-align: left;"><code>Encumbered; CHECK: -10; SPEED: /2</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Infected (INF)</strong></td>
+<td style="text-align: left;">Open wound failing 5-day Healing Roll</td>
+<td style="text-align: left;">Wound becomes infected. Tested daily on Infection Table (HR × END). Lowers HR on failure. Sepsis/Gangrene causes death if HR reaches H0. Defeated at HR6.</td>
+<td style="text-align: left;">Daily tests until defeated or death</td>
+<td style="text-align: left;"><code>Infected; HR: -1</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Diseased</strong></td>
+<td style="text-align: left;">Pathogen exposure (Contagion Index 1-7)</td>
+<td style="text-align: left;">Character suffers specific disease symptoms (Fever, Delirium, Chills, Nausea). Applies a <strong>Special Penalty of -10 to -30</strong> to physical skills. Tested daily.</td>
+<td style="text-align: left;">Daily recovery tests (HR1-HR5)</td>
+<td style="text-align: left;"><code>Diseased; CHECK: -20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Poisoned (Venom)</strong></td>
+<td style="text-align: left;">Toxin via injection, ingestion, contact</td>
+<td style="text-align: left;">Categories: Irritant (-10 to -30 penalty), Paralytic (stiffness to complete paralysis), Soporific (drowsiness/sleep), Lethal (rapid tissue death). Evaluated like fast-acting infections.</td>
+<td style="text-align: left;">Hours, minutes, or rounds depending on toxin</td>
+<td style="text-align: left;"><code>Poisoned; CHECK: -20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Burning (On Fire)</strong></td>
+<td style="text-align: left;">Flammable impact, fire magic, Greek fire</td>
+<td style="text-align: left;">Inflicts <strong>1d6 Fire (F)</strong> damage per round. Equipment may ignite. Requires a full round and Agility test (or rolling on ground) to extinguish.</td>
+<td style="text-align: left;">Until smothered, doused, or consumed</td>
+<td style="text-align: left;"><code>Burning: 1d6 F</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frostbite / Hypothermia</strong></td>
+<td style="text-align: left;">Extreme cold, Odivshe ice magic</td>
+<td style="text-align: left;">Mild: Shivering, numbness (-10 Special Penalty); Serious: 2nd degree frostbite (blisters); Grievous: 3rd degree (gangrene, requires amputation).</td>
+<td style="text-align: left;">Warming over 1d3 hours or medical care</td>
+<td style="text-align: left;"><code>Frostbite; CHECK: -10</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Asphyxiation / Drowning</strong></td>
+<td style="text-align: left;">Submersion, choking, smoke, vacuum</td>
+<td style="text-align: left;">Deprived of air. Can hold breath for Endurance × 10 seconds. Afterward, makes an <strong>Endurance check</strong> each round (cumulative -10 penalty). Failure = Unconscious, followed by death in 1d3 rounds.</td>
+<td style="text-align: left;">Rounds until air is restored or death</td>
+<td style="text-align: left;"><code>Asphyxiating; Drowning</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="morale-combat-mindsets">Morale &amp; Combat Mindsets<a class="headerlink" href="#morale-combat-mindsets" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Status Effect</th>
+<th style="text-align: left;">Source / Trigger</th>
+<th style="text-align: left;">Rule Mechanics</th>
+<th style="text-align: left;">Duration &amp; Recovery</th>
+<th style="text-align: left;">FGU Effect Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Frightened / Morale Broken</strong></td>
+<td style="text-align: left;">Leader casualty, severe wounds, terrifying foes</td>
+<td style="text-align: left;">Failed Morale check (Will × multiplier). Character panics, retreats, or surrenders. Cannot initiate attacks; focuses purely on flight or defensive parries (-20 EML attack / -10 EML defense).</td>
+<td style="text-align: left;">Until rallying check or combat ends</td>
+<td style="text-align: left;"><code>Frightened; ATK: -20; DEF: -10</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Berserk / Battle Rage</strong></td>
+<td style="text-align: left;">Cultural trait, Sarajin miracles, frenzy</td>
+<td style="text-align: left;">Character enters an uncontrollable bloodlust. Ignores all pain, shock, and fatigue penalties. Gains <strong>+20 EML</strong> to attack. Cannot parry, dodge, or disengage until all enemies fall.</td>
+<td style="text-align: left;">Duration of melee engagement</td>
+<td style="text-align: left;"><code>Berserk; ATK: 20; IGNOREPENALTY</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tactical Advantage (TA)</strong></td>
+<td style="text-align: left;">Combat Matrix outcome (CS vs CF/MF, or tactical maneuvers)</td>
+<td style="text-align: left;">The victor of a combat exchange earns <strong>Tactical Advantage</strong>, allowing them to dictate the next exchange (initiative, posture, or +10/+20 EML on follow-up attack) over their opponent.</td>
+<td style="text-align: left;">1 exchange / active round</td>
+<td style="text-align: left;"><code>ATK: 20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tactical Disadvantage</strong></td>
+<td style="text-align: left;">Outmaneuvered, poor footing, restricted space</td>
+<td style="text-align: left;">Actor is put at tactical disadvantage by opponent; suffers <strong>-20 EML</strong> on combat actions.</td>
+<td style="text-align: left;">1 exchange / active round</td>
+<td style="text-align: left;"><code>ATK: -20; DEF: -20</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-esoteric-psionic-status-effects">2. Esoteric &amp; Psionic Status Effects<a class="headerlink" href="#2-esoteric-psionic-status-effects" title="Permanent link">&para;</a></h2>
+<p>Psionic talents represent innate psychic phenomena that bypass physical armor and directly target mind or physiology.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Psionic Talent</th>
+<th style="text-align: left;">Activation &amp; Range</th>
+<th style="text-align: left;">Target Resistance</th>
+<th style="text-align: left;">Resulting Status Effect</th>
+<th style="text-align: left;">FGU Effect Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Charm</strong></td>
+<td style="text-align: left;">15-SI Secs; Range: SI yards</td>
+<td style="text-align: left;"><strong>Will × 5 (MS)</strong> / <strong>Will × 3 (CS)</strong></td>
+<td style="text-align: left;"><strong>CF</strong>: Frozen in place for 10s; must choose <em>Ignore</em> defense if attacked.<br><strong>MF</strong>: Frozen in place for 10s; may defend normally.<br><strong>CS/MS</strong>: Unaffected.</td>
+<td style="text-align: left;"><code>Charm; Stunned; DEF: Ignore</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mental Bolt</strong></td>
+<td style="text-align: left;">25-SI Secs; Range: SI × 5 yds</td>
+<td style="text-align: left;">None (Direct assault)</td>
+<td style="text-align: left;"><strong>MS</strong>: Victim accrues <strong>2 Fatigue Levels (F2)</strong>.<br><strong>CS</strong>: Victim accrues <strong>4 Fatigue Levels (F4)</strong>.<br>Victim must make an <strong>immediate Shock Roll</strong>.</td>
+<td style="text-align: left;">Native <strong>FT</strong> Box: <code>+2 FT (MS) / +4 FT (CS)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Hex (Evil Eye)</strong></td>
+<td style="text-align: left;">15-SI Mins; Line of sight / SI leagues</td>
+<td style="text-align: left;">None (Subject to hair/nail focus)</td>
+<td style="text-align: left;"><strong>MS</strong>: Victim's next skill, talent, or spell test is rolled at <strong>half EML</strong>.<br><strong>CS</strong>: <strong>Half EML</strong> on all skills for ML minutes.</td>
+<td style="text-align: left;"><code>Hexed; CHECK: /2</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Negation</strong></td>
+<td style="text-align: left;">15-SI Secs; Radius: Will feet</td>
+<td style="text-align: left;">Area Field (SI minutes)</td>
+<td style="text-align: left;">All spells, talents, and magical effects entering the field are degraded by <strong>one success level</strong> (CS→MS, MS→MF, MF→CF).</td>
+<td style="text-align: left;"><code>Negation Field; SPELLDEGRADE: 1</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ethereal Possession</strong></td>
+<td style="text-align: left;">Medium or haunting encounters</td>
+<td style="text-align: left;"><strong>Will vs Spirit Will</strong></td>
+<td style="text-align: left;">Victim's bodily control is overridden by an ethereal spirit. Soul is suppressed or enters catatonia.</td>
+<td style="text-align: left;"><code>Possessed; Incapacitated</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-arcane-magical-status-effects-harnmaster-magic">3. Arcane Magical Status Effects (HarnMaster Magic)<a class="headerlink" href="#3-arcane-magical-status-effects-harnmaster-magic" title="Permanent link">&para;</a></h2>
+<p>Across the six Shek-Pvar chantries and Gray (Neutral) magic, spells generate distinct tactile and supernatural conditions.</p>
+<h3 id="lyahvi-air-light-illusion">Lyahvi (Air / Light / Illusion)<a class="headerlink" href="#lyahvi-air-light-illusion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Globe of Setath (III)</strong>: Creates a fascinating, multi-colored hovering sphere.</li>
+<li><em>Save</em>: Will × 4 (MS Globe) / Will × 2 (CS Globe)</li>
+<li><em>CF</em>: Stationary, gazing into globe until removed; cannot make rolls (<code>Fascinated; Stunned</code>).</li>
+<li><em>MF</em>: Gazes helplessly for 10 seconds; roll to break free each 10s (<code>Stunned; dur: 1 rnd</code>).</li>
+<li><em>MS</em>: Distracted for 10s; opponents earn tactical advantage; suffers <strong>-10 Special Penalty</strong> and -10 defense (<code>Distracted; CHECK: -10; DEF: -10; dur: 1 rnd</code>).</li>
+<li><em>CS</em>: Ignores globe.</li>
+<li><strong>Hlandor's Flash (II)</strong>: Sudden brilliant pulse of light.</li>
+<li><em>Save</em>: Eyesight test.</li>
+<li><em>Effect</em>: <strong>Blinded</strong> and disoriented for 1d6 rounds (MS) or 2d6 minutes (CS). Attacks at -40 EML; defense at -20 EML.</li>
+<li><em>FGU Effect</em>: <code>Blinded; ATK: -40; DEF: -20; dur: 1d6 rnd</code></li>
+<li><strong>Cloak of Kalaerin (II)</strong>: Bends light around the recipient.</li>
+<li><em>Effect</em>: <strong>Invisible / Concealed</strong>. Attacks against recipient suffer -20 EML penalty. Recipient gains +20 EML on stealth and attacks from unseen posture.</li>
+<li><em>FGU Effect</em>: <code>Invisible; ATK: 20; DEF: 20</code></li>
+<li><strong>Prism of Gethan (III)</strong>: Disorienting rainbow aura.</li>
+<li><em>Effect</em>: Targets dazzled by shifting hues; <strong>-10 Special Penalty</strong> on visual and combat rolls.</li>
+<li><em>FGU Effect</em>: <code>Dazzled; CHECK: -10</code></li>
+<li><strong>Maslor's Charm (VII)</strong>: Potent compulsion of light and charisma.</li>
+<li><em>Save</em>: Will test.</li>
+<li><em>Effect</em>: Target is completely <strong>Charmed</strong>; regards caster as absolute master, incapable of harmful intent.</li>
+<li><em>FGU Effect</em>: <code>Charmed; PACIFIED</code></li>
+<li><strong>Aeric's Whisper (I)</strong>: Phantasmal auditory illusion.</li>
+<li><em>Effect</em>: Distracts guards or opponents; forces Awareness checks or imposes surprise.</li>
+<li><em>FGU Effect</em>: <code>Distracted; CHECK: -10</code></li>
+<li><strong>Vapor of Hirin (VI)</strong>: Dense illusory obscuration.</li>
+<li><em>Effect</em>: Total visual cover; all creatures inside treated as <strong>Blinded</strong> to exterior lines of sight.</li>
+<li><em>FGU Effect</em>: <code>Obscured; Blinded</code></li>
+</ul>
+<h3 id="peleahn-fire-heat">Peleahn (Fire / Heat)<a class="headerlink" href="#peleahn-fire-heat" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Zyrgin's Heat (I)</strong>: Radiates intense thermal energy.</li>
+<li><em>Save</em>: Endurance test.</li>
+<li><em>Effect</em>: Induces <strong>Heat Exhaustion</strong> and dehydration. Target accrues 1 Fatigue Level per round.</li>
+<li><em>FGU Effect</em>: <code>Heat Exhaustion</code>; Native <strong>FT</strong> Box: <code>+1 FT/round</code></li>
+<li><strong>Sphere of Shanakar (I) &amp; Sea of Fire (IV)</strong>: Flaming burst or wave.</li>
+<li><em>Effect</em>: Deals direct Fire (F) damage and <strong>Ignites</strong> victims. Victims catch fire (1d6 F damage/round until extinguished).</li>
+<li><em>FGU Effect</em>: <code>Burning: 1d6 F</code></li>
+<li><strong>Skin of Lexesh (II)</strong>: Molten defensive mantle.</li>
+<li><em>Effect</em>: Grants <strong>Fire Immunity / Absorption</strong> and inflicts 1d6 F damage on unarmed/melee attackers striking the caster.</li>
+<li><em>FGU Effect</em>: <code>Fire Warded; DMGTHORNS: 1d6 F</code></li>
+<li><strong>Aidan's Hastening (II)</strong>: Cellular hyper-acceleration.</li>
+<li><em>Effect</em>: <strong>Hastened</strong>. Movement doubled; gains +20 EML to Initiative and an additional defensive/combat option per round.</li>
+<li><em>FGU Effect</em>: <code>Hastened; INIT: 20; SPEED: *2</code></li>
+<li><strong>Charachi's Fever (IV)</strong>: Thermal somatic infection.</li>
+<li><em>Save</em>: Endurance test.</li>
+<li><em>Effect</em>: Severe internal fever, delirium, and shivering. Imposes <strong>-20 Special Penalty</strong> to all mental and physical actions; progressive fatigue.</li>
+<li><em>FGU Effect</em>: <code>Fevered; Delirious; CHECK: -20</code></li>
+<li><strong>Bolts of Dag (V)</strong>: Concentrated projectile plasma.</li>
+<li><em>Effect</em>: Severe trauma + fire damage; forces immediate Stumble and Shock rolls.</li>
+<li><em>FGU Effect</em>: <code>Burn Trauma; Stumble</code></li>
+</ul>
+<h3 id="jmorvi-metal-mineral">Jmorvi (Metal / Mineral)<a class="headerlink" href="#jmorvi-metal-mineral" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Aspect of Tarus (II)</strong>: Transmutes outer skin into mineral hardness.</li>
+<li><em>Effect</em>: Grants +4 to +8 physical armor protection (Blunt, Edge, Point), but increases weight and imposes <strong>-10 to Agility/Acrobatics</strong>.</li>
+<li><em>FGU Effect</em>: <code>Armor Buff: 6; AGL: -10</code></li>
+<li><strong>Anvil of Pytama (III) &amp; Fist of Kuhan (IV)</strong>: Telekinetic kinetic bludgeon.</li>
+<li><em>Effect</em>: Heavy blunt impact; forces automatic <strong>Knockback</strong> (1-3 hexes) and mandatory <strong>Stumble Roll</strong>.</li>
+<li><em>FGU Effect</em>: <code>Knockback; Stumble</code></li>
+<li><strong>Barl's Cloak (VI)</strong>: Sheaths target in malleable metallic carapace.</li>
+<li><em>Effect</em>: Extreme armor value (+12), but reduces Move by half and adds 2 Encumbrance Levels.</li>
+<li><em>FGU Effect</em>: <code>Metal Cloak; ARMOR: 12; SPEED: /2</code></li>
+<li><strong>Sirik's Cant (III)</strong>: Molecular reinforcement or degradation of metals.</li>
+<li><em>Effect</em>: Can render an opponent's weapon brittle (shatters on next impact &gt; 5) or reinforce ally weapons.</li>
+<li><em>FGU Effect</em>: <code>Brittle Weapon</code></li>
+</ul>
+<h3 id="fyvria-earth-flora-fauna">Fyvria (Earth / Flora / Fauna)<a class="headerlink" href="#fyvria-earth-flora-fauna" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Dream of Galega (IV)</strong>: Enchanted natural slumber.</li>
+<li><em>Save</em>: Will × 5.</li>
+<li><em>CF</em>: Asleep for 2d6 hours (<code>Unconscious; Asleep</code>).</li>
+<li><em>MF</em>: Asleep for 1d6 hours (<code>Unconscious; Asleep</code>).</li>
+<li><em>MS</em>: Drowsy for 1d6 rounds (<code>Drowsy; CHECK: -10</code>).</li>
+<li><em>CS</em>: Unaffected.</li>
+<li><strong>Verdant Hand (II) &amp; Hand of Iliam (II)</strong>: Animated undergrowth and roots.</li>
+<li><em>Save</em>: Agility or Strength check.</li>
+<li><em>Effect</em>: Targets in area are <strong>Entangled / Restrained</strong>. Move reduced to 0; -20 EML on attacks; opponents gain +20 EML against them.</li>
+<li><em>FGU Effect</em>: <code>Entangled; Restrained; ATK: -20; DEF: -20</code></li>
+<li><strong>Vine of Alguinas (IV)</strong>: Constricting magical creepers.</li>
+<li><em>Effect</em>: <strong>Grappled &amp; Choked</strong>. Inflicts 1d6 Blunt impact per round; forces Asphyxiation checks if wrapped around torso/neck.</li>
+<li><em>FGU Effect</em>: <code>Constricted; Asphyxiating</code></li>
+<li><strong>Balm of Gresan (I)</strong>: Accelerated biological coagulation.</li>
+<li><em>Effect</em>: Immediately <strong>Stops Bleeders</strong>; heals 1-2 Injury Levels; cures minor infections.</li>
+<li><em>FGU Effect</em>: <code>Healed; Bleeding Stopped</code></li>
+<li><strong>Animus of Nithri (V)</strong>: Primal empathetic sovereignty.</li>
+<li><em>Effect</em>: Beasts and natural predators are completely <strong>Pacified / Charmed</strong>; will not attack and follow simple instincts.</li>
+<li><em>FGU Effect</em>: <code>Pacified; Charmed</code></li>
+</ul>
+<h3 id="odivshe-water-cold-shadow">Odivshe (Water / Cold / Shadow)<a class="headerlink" href="#odivshe-water-cold-shadow" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Azure Hand (I) &amp; Shadow of Yanar (II)</strong>: Deep shadow synthesis.</li>
+<li><em>Effect</em>: Extinguishes non-magical light. Caster or area surrounded by absolute gloom; exterior observers suffer <strong>Blinded / Concealed</strong> penalties.</li>
+<li><em>FGU Effect</em>: <code>Shadow Cloak; DEF: 20</code></li>
+<li><strong>Breath of Dhivu (III) &amp; Pall of Veshel (IV)</strong>: Freezing gale and creeping permafrost.</li>
+<li><em>Save</em>: Endurance test.</li>
+<li><em>Effect</em>: Targets suffer Frost (F) damage and become <strong>Chilled / Numbed</strong>. -10 to -20 penalty to physical dexterity; movement halved.</li>
+<li><em>FGU Effect</em>: <code>Chilled; CHECK: -15; SPEED: /2</code></li>
+<li><strong>Mouth of Lathal (III)</strong>: Amphibious pulmonary inversion.</li>
+<li><em>Effect</em>: Grants water breathing. However, if used offensively (or reversed as Curse of Balrin), victim's lungs fill with water on dry land, causing <strong>Drowning / Suffocation</strong>.</li>
+<li><em>FGU Effect</em>: <code>Drowning; Asphyxiating</code></li>
+<li><strong>Curse of Balrin (IV)</strong>: Desiccation or watery asphyxiation.</li>
+<li><em>Save</em>: Endurance × 3.</li>
+<li><em>Effect</em>: Inability to breathe air. Victim begins suffocating immediately on dry land.</li>
+<li><em>FGU Effect</em>: <code>Suffocating; Drowning</code></li>
+</ul>
+<h3 id="savorya-mind-spirit-knowledge">Savorya (Mind / Spirit / Knowledge)<a class="headerlink" href="#savorya-mind-spirit-knowledge" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Ordeal of Frida (III)</strong>: Nightmare psychosis excitation.</li>
+<li><em>Save</em>: Will × 5 (MS) / Will × 2 (CS).</li>
+<li><em>Effect</em>: Triggers acute phobias or manias. Victim becomes <strong>Panicked / Cowering</strong> or falls into a <strong>Catatonic Stun</strong> for duration.</li>
+<li><em>FGU Effect</em>: <code>Phobic Panic; Frightened; Stunned</code></li>
+<li><strong>Jerila's Zone (V)</strong>: Mnemonic fog field.</li>
+<li><em>Save</em>: Will test.</li>
+<li><em>Effect</em>: Induces <strong>Amnesia &amp; Disorientation</strong>. Victims forget recent memories, current combat objectives, and identity of allies/foes.</li>
+<li><em>FGU Effect</em>: <code>Confused; Amnesic; CHECK: -20</code></li>
+<li><strong>Aron's Thought (II) &amp; Loth's Key (III)</strong>: Telepathic breach.</li>
+<li><em>Save</em>: Will test.</li>
+<li><em>Effect</em>: Target's thoughts laid bare; caster anticipates moves, gaining <strong>+20 EML to attack and defense</strong> against victim.</li>
+<li><em>FGU Effect</em>: <code>Mind Probed; DEF: -20</code></li>
+<li><strong>Galra's Enhancement (II) &amp; Perfection of Sif (I)</strong>: Cognitive and sensory amplification.</li>
+<li><em>Effect</em>: Boosts chosen attribute (INT, WIL, AUR, EYE) by +2 to +5; grants immunity to sensory overload.</li>
+<li><em>FGU Effect</em>: <code>Enhanced Mind; INT: 3; WIL: 3</code></li>
+<li><strong>Spirit Block (IV)</strong>: Impenetrable psychic bulwark.</li>
+<li><em>Effect</em>: Complete immunity to psionics, charm, fear, and mental enchantments.</li>
+<li><em>FGU Effect</em>: <code>Mind Shield; IMMUNE: charmed, frightened</code></li>
+<li><strong>Veil of Iros (VI)</strong>: Psychic invisibility.</li>
+<li><em>Effect</em>: Minds simply ignore presence of caster. Counts as total <strong>Invisibility</strong> against sentient minds.</li>
+<li><em>FGU Effect</em>: <code>Invisible; Mind-Veiled</code></li>
+</ul>
+<h3 id="gray-neutral-magic">Gray / Neutral Magic<a class="headerlink" href="#gray-neutral-magic" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Dispell (I)</strong>: Arcane unraveling.</li>
+<li><em>Effect</em>: Strips active enchantments, status effects, and magical wards from target.</li>
+<li><em>FGU Effect</em>: <code>Dispelled</code></li>
+<li><strong>Soul Stealer (V)</strong>: Ethereal severing.</li>
+<li><em>Save</em>: Will test vs Caster CML.</li>
+<li><em>Effect</em>: Soul drawn out into receptacle. Physical body left in permanent <strong>Catatonia / Coma</strong> until soul is returned.</li>
+<li><em>FGU Effect</em>: <code>Catatonic; Comatose; Incapacitated</code></li>
+<li><strong>Arwyn's Bubble (V)</strong>: Life-sustaining biosphere.</li>
+<li><em>Effect</em>: Immune to environmental hazards, drowning, gas, vacuum, and extreme temperature.</li>
+<li><em>FGU Effect</em>: <code>Life Support; IMMUNE: drowning, suffocation</code></li>
+</ul>
+<hr />
+<h2 id="4-divine-invocations-miracles-harnmaster-religion">4. Divine Invocations &amp; Miracles (HarnMaster Religion)<a class="headerlink" href="#4-divine-invocations-miracles-harnmaster-religion" title="Permanent link">&para;</a></h2>
+<p>Clerical rituals invoke divine intervention from the Pantheon of Hârn, producing powerful celestial and infernal conditions.</p>
+<h3 id="common-church-rituals">Common Church Rituals<a class="headerlink" href="#common-church-rituals" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Awe (III)</strong>: The cleric radiates terrifying divine presence.</li>
+<li><em>Save</em>: Will × 3 (or Morale check).</li>
+<li><em>Effect</em>: Opponents are <strong>Awestruck / Frozen</strong> in reverence. Cannot initiate attacks against the priest; must choose <em>Ignore</em> or defensive reactions.</li>
+<li><em>FGU Effect</em>: <code>Awestruck; Pacified; ATK: -20</code></li>
+<li><strong>Curse (IV)</strong>: Pronouncement of divine wrath.</li>
+<li><em>Effect</em>: Victim suffers continuous misfortune; <strong>-10 to -20 Special Penalty</strong> on all skill and combat tests for days or months.</li>
+<li><em>FGU Effect</em>: <code>Cursed; CHECK: -15</code></li>
+<li><strong>Blessing (II)</strong>: Impartation of celestial grace.</li>
+<li><em>Effect</em>: Grants <strong>+10 EML</strong> bonus to all tests and saves made in righteous defense.</li>
+<li><em>FGU Effect</em>: <code>Blessed; CHECK: 10; ATK: 10</code></li>
+<li><strong>Endure (III)</strong>: Divine analgesic fortitude.</li>
+<li><em>Effect</em>: Recipient ignores all <strong>Pain, Injury Penalties, and Fatigue Penalties</strong> for duration.</li>
+<li><em>FGU Effect</em>: <code>Enduring; IGNOREPENALTY</code></li>
+<li><strong>Command (V)</strong>: Inviolable clerical decree.</li>
+<li><em>Save</em>: Will test.</li>
+<li><em>Effect</em>: Target is <strong>Compelled</strong> to execute a single non-suicidal command ("Halt", "Surrender", "Flee", "Kneel").</li>
+<li><em>FGU Effect</em>: <code>Commanded; Compelled</code></li>
+<li><strong>Excommunication (V)</strong>: Severance of divine connection.</li>
+<li><em>Effect</em>: Piety stripped; unable to invoke miracles or receive divine aid; marked as anathema.</li>
+<li><em>FGU Effect</em>: <code>Excommunicated</code></li>
+<li><strong>Exorcism (V)</strong>: Expulsion of invading spirits.</li>
+<li><em>Effect</em>: Forces demonic or ethereal possessors out of the victim's body.</li>
+<li><em>FGU Effect</em>: <code>Dispossessed</code></li>
+</ul>
+<h3 id="agrik-fire-war-cruelty">Agrik (Fire, War, Cruelty)<a class="headerlink" href="#agrik-fire-war-cruelty" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Ak-Syt's Peace (II)</strong>: Excruciating ritual torture trance.</li>
+<li><em>Effect</em>: Target incapacitated by intense sensory agony.</li>
+<li><em>FGU Effect</em>: <code>Agony; Incapacitated</code></li>
+<li><strong>Mamaka's Cry (III) &amp; Intimidation (IV)</strong>: Terrifying hellish scream.</li>
+<li><em>Save</em>: Will test.</li>
+<li><em>Effect</em>: Enemies are <strong>Terrified / Panicked</strong>; must flee or cower. Attacks suffer -20 EML.</li>
+<li><em>FGU Effect</em>: <code>Frightened; Panicked; ATK: -20; DEF: -10</code></li>
+<li><strong>Searing Hand (III) &amp; Flames of the V'hir (IV)</strong>: Unholy hellfire projection.</li>
+<li><em>Effect</em>: Causes severe 3rd degree burns and sets victims <strong>On Fire</strong> (1d6 F damage/round).</li>
+<li><em>FGU Effect</em>: <code>Burning: 1d6 F</code></li>
+<li><strong>Agrik's Rot (IV)</strong>: Demonic necrotic curse.</li>
+<li><em>Save</em>: Endurance test.</li>
+<li><em>Effect</em>: Flesh instantly decays with necrotic gangrene. Healing Rate drops to H1; spreads rapidly.</li>
+<li><em>FGU Effect</em>: <code>Necrotic Rot; Infected; HR: 1</code></li>
+<li><strong>Crimson Dance (IV)</strong>: Blood-crazed berserk trance.</li>
+<li><em>Effect</em>: Cleric or champion enters divine frenzy; immune to shock and pain; +20 EML to attack.</li>
+<li><em>FGU Effect</em>: <code>Crimson Frenzy; Berserk; ATK: 20</code></li>
+</ul>
+<h3 id="halea-wealth-pleasure-intrigue">Halea (Wealth, Pleasure, Intrigue)<a class="headerlink" href="#halea-wealth-pleasure-intrigue" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Ecstasy (II) &amp; Tania's Pleasure (III)</strong>: Overwhelming sensual bliss.</li>
+<li><em>Save</em>: Will × 4 (MS) / Will × 2 (CS).</li>
+<li><em>Effect</em>: Target is completely <strong>Incapacitated with Pleasure</strong>; drops weapons, placid, incapable of hostile action.</li>
+<li><em>FGU Effect</em>: <code>Ecstatic; Incapacitated; Docile</code></li>
+<li><strong>Dulcia's Song (II) &amp; Silver Tongue (II)</strong>: Irresistible allure.</li>
+<li><em>Save</em>: Will test.</li>
+<li><em>Effect</em>: Target is <strong>Charmed / Enamored</strong>; regards speaker with adoration, highly gullible to suggestion.</li>
+<li><em>FGU Effect</em>: <code>Charmed; Enamored</code></li>
+<li><strong>Sadura's Rash (V)</strong>: Agonizing, maddening pruritus.</li>
+<li><em>Save</em>: Endurance test.</li>
+<li><em>Effect</em>: Unbearable violent itching across the body. Imposes <strong>-20 Special Penalty</strong> on all skills and prevents spellcasting.</li>
+<li><em>FGU Effect</em>: <code>Maddening Rash; CHECK: -20; ATK: -20</code></li>
+<li><strong>Halea's Apple (IV)</strong>: Seeds of covetous discord.</li>
+<li><em>Save</em>: Will test.</li>
+<li><em>Effect</em>: Inoculates intense <strong>Greed &amp; Paranoia</strong>; targets turn upon their companions to seize riches.</li>
+<li><em>FGU Effect</em>: <code>Covetous Paranoia; Confused</code></li>
+</ul>
+<h3 id="ilvir-creation-ivashu">Ilvir (Creation, Ivashu)<a class="headerlink" href="#ilvir-creation-ivashu" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Bellow of the Aklash (III)</strong>: Shattering sonic roar of the Craven Beast.</li>
+<li><em>Save</em>: Endurance or Will test.</li>
+<li><em>Effect</em>: Opponents are <strong>Deafened</strong> for 1d6 hours and must make an immediate <strong>Stumble Roll</strong> to avoid falling prone.</li>
+<li><em>FGU Effect</em>: <code>Deafened; Stumble; Prone</code></li>
+<li><strong>Ibenis' Withering (IV)</strong>: Atrophy curse of the Brooder.</li>
+<li><em>Save</em>: Endurance × 3.</li>
+<li><em>Effect</em>: Struck limb shrivels into dead wood; becomes permanently <strong>Crippled / Unusable</strong>.</li>
+<li><em>FGU Effect</em>: <code>Withered Limb; Crippled</code></li>
+<li><strong>Serpent of the Claw (IV)</strong>: Transmutation into virulent venom.</li>
+<li><em>Save</em>: Endurance test.</li>
+<li><em>Effect</em>: Strikes inflict deadly paralytic venom; victim becomes <strong>Stiffened / Paralyzed</strong> within 3 rounds.</li>
+<li><em>FGU Effect</em>: <code>Paralytic Venom; Paralyzed</code></li>
+<li><strong>Feat of Albarra (III)</strong>: Bestial physical distortion.</li>
+<li><em>Effect</em>: Grants monstrous strength and natural claws/bite attacks.</li>
+<li><em>FGU Effect</em>: <code>Beast Form; STR: 4; ATK: 15</code></li>
+</ul>
+<h3 id="larani-honor-chivalry-war">Larani (Honor, Chivalry, War)<a class="headerlink" href="#larani-honor-chivalry-war" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Courage of Mendiz (II) &amp; Blessing of the Winged Lion (III)</strong>: Valiant celestial mantle.</li>
+<li><em>Effect</em>: Recipients gain absolute <strong>Immunity to Fear, Dread, and Intimidation</strong>; +20 to Morale tests.</li>
+<li><em>FGU Effect</em>: <code>Valiant; IMMUNE: frightened; MORALE: 20</code></li>
+<li><strong>Curse of the Reluctant Warrior (II)</strong>: Rebuke to the dishonorable.</li>
+<li><em>Save</em>: Will test.</li>
+<li><em>Effect</em>: Struck with craven cowardice and trembling limbs. Suffers <strong>-20 EML</strong> in combat; forces immediate flight.</li>
+<li><em>FGU Effect</em>: <code>Cowardice; Frightened; CHECK: -20</code></li>
+<li><strong>Light of Dolithor (II)</strong>: Radiance of the High Castle.</li>
+<li><em>Effect</em>: Blinds undead, demons, and creatures of darkness; imposes -40 EML on their strikes.</li>
+<li><em>FGU Effect</em>: <code>Holy Radiance; Blinded (Undead)</code></li>
+<li><strong>Knight's Peace (III)</strong>: Sanctuary of the Lady of Paladins.</li>
+<li><em>Effect</em>: Complete aura of non-violence. All weapons sheathed; hostile actions prevented.</li>
+<li><em>FGU Effect</em>: <code>Sanctuary; Pacified</code></li>
+<li><strong>Valamin's Sleep (IV)</strong>: Gentle restorative slumber.</li>
+<li><em>Effect</em>: Wounded warriors fall into peaceful healing sleep; accelerates recovery from shock and wounds.</li>
+<li><em>FGU Effect</em>: <code>Peaceful Sleep; Healing Buff</code></li>
+</ul>
+<h3 id="morgath-death-undead-chaos">Morgath (Death, Undead, Chaos)<a class="headerlink" href="#morgath-death-undead-chaos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Heart of Darkness (II)</strong>: Shroud of ultimate terror.</li>
+<li><em>Save</em>: Will × 3.</li>
+<li><em>Effect</em>: Opponents suffer suffocating dread; become <strong>Panicked / Fleeing</strong>; cannot look upon the priest.</li>
+<li><em>FGU Effect</em>: <code>Horrified; Frightened; ATK: -20</code></li>
+<li><strong>Necrosy (II)</strong>: Instantaneous putrefactive leprosy.</li>
+<li><em>Save</em>: Endurance test.</li>
+<li><em>Effect</em>: Skin rots and sloughs off. Inflicts permanent scarring, loss of Comeliness, and open infected wounds.</li>
+<li><em>FGU Effect</em>: <code>Rotting Flesh; Infected; CML: -5</code></li>
+<li><strong>Throat of Klyss (III)</strong>: Spectral strangulation.</li>
+<li><em>Save</em>: Endurance test.</li>
+<li><em>Effect</em>: Invisible claws crush victim's trachea. Target is <strong>Asphyxiating / Choked</strong>; unable to speak, cast spells, or breathe.</li>
+<li><em>FGU Effect</em>: <code>Strangled; Asphyxiating</code></li>
+<li><strong>Myvria's Kiss (IV)</strong>: Soul drain of the Black Mistress.</li>
+<li><em>Save</em>: Will test.</li>
+<li><em>Effect</em>: Drains life force directly; inflicts 2d6 unhealable trauma and places target in <strong>Catatonic Coma</strong>.</li>
+<li><em>FGU Effect</em>: <code>Life Drained; Comatose; Incapacitated</code></li>
+</ul>
+<h3 id="naveh-shadows-assassination-night">Naveh (Shadows, Assassination, Night)<a class="headerlink" href="#naveh-shadows-assassination-night" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Dekejis' Gift (II) &amp; Gytevsha's Passage (III)</strong>: Shadow realm passage.</li>
+<li><em>Effect</em>: Complete <strong>Invisibility and Silence</strong>. Steps make no sound; scent masked; immune to passive detection.</li>
+<li><em>FGU Effect</em>: <code>Shadow Cloak; Invisible; SILENCE</code></li>
+<li><strong>Flash from Kamil (III)</strong>: Abrupt blinding detonation.</li>
+<li><em>Save</em>: Eyesight test.</li>
+<li><em>Effect</em>: Targets in radius are <strong>Blinded</strong> and disoriented for 2d6 rounds. Attacks at -40 EML; defense at -20 EML.</li>
+<li><em>FGU Effect</em>: <code>Blinded; ATK: -40; DEF: -20</code></li>
+<li><strong>Krasula's Pillow (III)</strong>: Nightmare asphyxiation.</li>
+<li><em>Save</em>: Will test.</li>
+<li><em>Effect</em>: Target slips from normal sleep into a deep comatose state, suffocating in their own nightmare.</li>
+<li><em>FGU Effect</em>: <code>Nightmare Coma; Asleep; Suffocating</code></li>
+<li><strong>Krasula's Whisper (III)</strong>: Seed of paranoia and madness.</li>
+<li><em>Save</em>: Will × 3.</li>
+<li><em>Effect</em>: Induces auditory and visual hallucinations; target attacks phantoms or friends in panic.</li>
+<li><em>FGU Effect</em>: <code>Hallucinating; Confused; ATK: -20; CHECK: -20</code></li>
+<li><strong>Talons of Gekrish (V)</strong>: The ultimate assassin's coating.</li>
+<li><em>Effect</em>: Envenoms weapon with Navehan venom; successful hit causes instant <strong>Paralysis</strong> (round 1) and <strong>Death</strong> (round 2) on failed END check.</li>
+<li><em>FGU Effect</em>: <code>Lethal Venom; Paralyzed</code></li>
+</ul>
+<h3 id="peoni-healing-agriculture-mercy">Peoni (Healing, Agriculture, Mercy)<a class="headerlink" href="#peoni-healing-agriculture-mercy" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Peace of Valon (III)</strong>: The celestial calm of the White Maiden.</li>
+<li><em>Effect</em>: Aura in which no blood may be shed. Attackers must test Will to even initiate violence.</li>
+<li><em>FGU Effect</em>: <code>Aura of Peace; Pacified</code></li>
+<li><strong>Tirrala's Cure (III) &amp; Healing of Gorlan (IV)</strong>: Miraculous divine remedy.</li>
+<li><em>Effect</em>: Immediately cures all diseases, neutralizes venoms, purifies infections, and clots all bleeders.</li>
+<li><em>FGU Effect</em>: <code>Purified; Cured; Bleeding Stopped</code></li>
+<li><strong>Mirytha's Shade (III)</strong>: Refreshing pastoral relief.</li>
+<li><em>Effect</em>: Clears all Fatigue Levels (FL) and removes dehydration/heatstroke conditions.</li>
+<li><em>FGU Effect</em>: <code>Refreshed; Fatigue Removed</code></li>
+</ul>
+<h3 id="sarajin-battle-honor-frost">Sarajin (Battle, Honor, Frost)<a class="headerlink" href="#sarajin-battle-honor-frost" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Spirit of Shalka (III)</strong>: Battle-fury of the Ice Barbarians.</li>
+<li><em>Effect</em>: Warrior enters sacred <strong>Ivinian Berserk</strong>. Completely ignores shock checks, fatigue, and pain penalties; +20 EML to axe/sword.</li>
+<li><em>FGU Effect</em>: <code>Ivinian Berserk; ATK: 20; IGNOREPENALTY</code></li>
+<li><strong>Usnarl's Hug (II)</strong>: Crushing grip of the Great Bear.</li>
+<li><em>Save</em>: Strength contest.</li>
+<li><em>Effect</em>: Target is <strong>Grappled &amp; Pinned</strong>; ribs crushed; suffers 2d6 Blunt damage each round held.</li>
+<li><em>FGU Effect</em>: <code>Bear Hugged; Restrained; CRUSH: 2d6 B</code></li>
+<li><strong>Njehu's Wind (V) &amp; Njehu's Stir (V)</strong>: Wrath of the Northern Blizzard.</li>
+<li><em>Save</em>: Endurance test.</li>
+<li><em>Effect</em>: Freezing blizzard blinds all within area; causes severe Frostbite and <strong>Hypothermia</strong> (-20 EML).</li>
+<li><em>FGU Effect</em>: <code>Blizzard Shroud; Blinded; Frostbite; CHECK: -20</code></li>
+<li><strong>Fakang's Edge (V)</strong>: Rime weapon enchantment.</li>
+<li><em>Effect</em>: Weapon blade covered in sub-zero frost; causes numbing shock and slows opponent's reactions.</li>
+<li><em>FGU Effect</em>: <code>Rime Edge; Frost: 1d6 F; INIT: -10</code></li>
+</ul>
+<h3 id="save-knor-knowledge-riddles-order">Save-K'nor (Knowledge, Riddles, Order)<a class="headerlink" href="#save-knor-knowledge-riddles-order" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Silence of Uhla (III)</strong>: Vow of holy wordlessness.</li>
+<li><em>Save</em>: Will test.</li>
+<li><em>Effect</em>: Target is rendered completely <strong>Mute / Speechless</strong>. Cannot cast verbal spells, shout orders, or speak.</li>
+<li><em>FGU Effect</em>: <code>Silenced; Mute; NO_VERBAL</code></li>
+<li><strong>Argenon's Riddle (III)</strong>: The paradox of the Lost Sage.</li>
+<li><em>Save</em>: Intelligence test.</li>
+<li><em>Effect</em>: Mind locked in solving an insoluble paradox. Target stands motionless, unable to act or defend (<code>Stunned / Baffled</code>).</li>
+<li><em>FGU Effect</em>: <code>Baffled; Stunned; DEF: -20</code></li>
+<li><strong>Daemar's Discipline (III)</strong>: Mathematical cognitive tranquility.</li>
+<li><em>Effect</em>: Immunity to emotional manipulation, fear, and confusion; +10 to all intellectual and ritual tests.</li>
+<li><em>FGU Effect</em>: <code>Disciplined; INT: 2; IMMUNE: frightened</code></li>
+</ul>
+<h3 id="siem-dreams-astral-mystery">Siem (Dreams, Astral, Mystery)<a class="headerlink" href="#siem-dreams-astral-mystery" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Curse of Sloth (III)</strong>: The weight of eternal slumber.</li>
+<li><em>Save</em>: Will test.</li>
+<li><em>Effect</em>: Target struck with crippling lethargy. Movement rate halved; universal penalty doubled; cannot run.</li>
+<li><em>FGU Effect</em>: <code>Lethargic; SPEED: /2; CHECK: -20</code></li>
+<li><strong>Ilsiri Dance (III) &amp; Yael's Calm (III)</strong>: Astral song of the Sindarin.</li>
+<li><em>Save</em>: Will test.</li>
+<li><em>Effect</em>: Targets fall into a peaceful <strong>Dreamlike Trance</strong>; mesmerized by swirling lights, laying down weapons.</li>
+<li><em>FGU Effect</em>: <code>Dream Trance; Pacified; Docile</code></li>
+<li><strong>Sweldre's Cloak (V)</strong>: Shroud of the Blessed Realm.</li>
+<li><em>Effect</em>: Caster and allies step sideways into the astral weave; completely invisible and untouchable by physical attacks.</li>
+<li><em>FGU Effect</em>: <code>Astral Shroud; Invisible; IMMUNE: all</code></li>
+</ul>
+<hr />
+<h2 id="5-fgu-automation-effect-string-master-matrix">5. FGU Automation &amp; Effect String Master Matrix<a class="headerlink" href="#5-fgu-automation-effect-string-master-matrix" title="Permanent link">&para;</a></h2>
+<p>Use this master lookup table when creating weapon actions, spell effects, and miracle items in Fantasy Grounds Unity.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Condition / Status Effect</th>
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;">Primary Mechanical Impact</th>
+<th style="text-align: left;">Engine Keywords &amp; FGU Effect String</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Prone</strong></td>
+<td style="text-align: left;">Physical Combat</td>
+<td style="text-align: left;">-20 EML to attacks/defenses; +20 EML to attackers</td>
+<td style="text-align: left;"><code>Prone; ATK: -20; DEF: -20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Stumble</strong></td>
+<td style="text-align: left;">Physical Combat</td>
+<td style="text-align: left;">Balance lost; forced prone on failure</td>
+<td style="text-align: left;"><code>Stumble; Prone</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fumble</strong></td>
+<td style="text-align: left;">Physical Combat</td>
+<td style="text-align: left;">Drop weapon, shield destroyed, guard dropped</td>
+<td style="text-align: left;"><code>Fumble</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Bleeder (Bloodloss)</strong></td>
+<td style="text-align: left;">Physical Trauma</td>
+<td style="text-align: left;">1 BP accrued per minute; death if BPs &gt; END</td>
+<td style="text-align: left;"><code>Bleeding: 1 BP/min</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Shock State</strong></td>
+<td style="text-align: left;">Physical Trauma</td>
+<td style="text-align: left;">Medical state (H5); 4-hr check vs HR×END</td>
+<td style="text-align: left;"><code>Shock; CHECK: -20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Unconscious</strong></td>
+<td style="text-align: left;">Physical Trauma</td>
+<td style="text-align: left;">Helpless; auto-fail checks; attacks strike uncontested</td>
+<td style="text-align: left;"><code>Unconscious; Prone; DEF: Ignore</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Incapacitated</strong></td>
+<td style="text-align: left;">Physical / Recovery</td>
+<td style="text-align: left;">Shock transition; -10 penalty on initiative</td>
+<td style="text-align: left;"><code>Incapacitated; INIT: -10</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Crippled Limb</strong></td>
+<td style="text-align: left;">Physical Trauma</td>
+<td style="text-align: left;">Arm/Leg unusable until healed to M1</td>
+<td style="text-align: left;"><code>Crippled Limb; CHECK: -20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Amputated</strong></td>
+<td style="text-align: left;">Physical Trauma</td>
+<td style="text-align: left;">Extremity severed; permanent loss; bleeder</td>
+<td style="text-align: left;"><code>Amputated; Bleeding: 1 BP/min; CHECK: -30</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Blinded</strong></td>
+<td style="text-align: left;">Physical / Magic</td>
+<td style="text-align: left;">Vision lost; -40 EML attack / -20 EML defense</td>
+<td style="text-align: left;"><code>Blinded; ATK: -40; DEF: -20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Deafened</strong></td>
+<td style="text-align: left;">Physical / Magic</td>
+<td style="text-align: left;">Hearing lost; auto-fail acoustic awareness</td>
+<td style="text-align: left;"><code>Deafened; CHECK: -30 hearing</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fatigued</strong></td>
+<td style="text-align: left;">Physiological</td>
+<td style="text-align: left;">+1 Universal Penalty per level</td>
+<td style="text-align: left;">Native <strong>FT</strong> Box (+1 per FL)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Encumbered</strong></td>
+<td style="text-align: left;">Physiological</td>
+<td style="text-align: left;">Speed halved/quartered; physical skill penalties</td>
+<td style="text-align: left;"><code>Encumbered; CHECK: -10; SPEED: /2</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Infected</strong></td>
+<td style="text-align: left;">Physiological</td>
+<td style="text-align: left;">Daily test vs HR×END; spreads to adjacent limbs</td>
+<td style="text-align: left;"><code>Infected; HR: -1</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Diseased</strong></td>
+<td style="text-align: left;">Physiological</td>
+<td style="text-align: left;">Skill penalties -10 to -30; daily progression</td>
+<td style="text-align: left;"><code>Diseased; CHECK: -20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Poisoned</strong></td>
+<td style="text-align: left;">Physiological</td>
+<td style="text-align: left;">Irritant, paralytic, or lethal progressive decline</td>
+<td style="text-align: left;"><code>Poisoned; CHECK: -20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Burning (On Fire)</strong></td>
+<td style="text-align: left;">Environmental</td>
+<td style="text-align: left;">1d6 Fire damage per round until extinguished</td>
+<td style="text-align: left;"><code>Burning: 1d6 F</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frostbite / Chilled</strong></td>
+<td style="text-align: left;">Environmental</td>
+<td style="text-align: left;">Shivering, hypothermia, speed halved</td>
+<td style="text-align: left;"><code>Frostbite; CHECK: -15; SPEED: /2</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Asphyxiating / Drowning</strong></td>
+<td style="text-align: left;">Environmental</td>
+<td style="text-align: left;">Air deprived; END test per round until death</td>
+<td style="text-align: left;"><code>Drowning; Asphyxiating</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frightened / Morale Broken</strong></td>
+<td style="text-align: left;">Psychological</td>
+<td style="text-align: left;">Panicked; must flee or cower; cannot attack</td>
+<td style="text-align: left;"><code>Frightened; ATK: -20; DEF: -10</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Berserk / Battle Rage</strong></td>
+<td style="text-align: left;">Psychological</td>
+<td style="text-align: left;">+20 EML attack; immune to shock/pain; cannot parry</td>
+<td style="text-align: left;"><code>Berserk; ATK: 20; IGNOREPENALTY</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tactical Advantage (TA)</strong></td>
+<td style="text-align: left;">Combat Matrix Outcome</td>
+<td style="text-align: left;">Winner dictates next exchange; +10 to +20 EML</td>
+<td style="text-align: left;"><code>ATK: 20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tactical Disadvantage</strong></td>
+<td style="text-align: left;">Combat State</td>
+<td style="text-align: left;">Outmaneuvered / off balance; -20 EML on actions</td>
+<td style="text-align: left;"><code>ATK: -20; DEF: -20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fascinated / Mesmerized</strong></td>
+<td style="text-align: left;">Magic / Psionic</td>
+<td style="text-align: left;">Frozen gazing; cannot make rolls or actions</td>
+<td style="text-align: left;"><code>Globe of Setath; Fascinated; Stunned</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Distracted</strong></td>
+<td style="text-align: left;">Magic / Spell</td>
+<td style="text-align: left;">Opponents gain tactical adv; -10 Special Penalty</td>
+<td style="text-align: left;"><code>Distracted; CHECK: -10; DEF: -10</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Entangled / Restrained</strong></td>
+<td style="text-align: left;">Magic / Fyvria</td>
+<td style="text-align: left;">Speed 0; -20 EML attacks &amp; defenses</td>
+<td style="text-align: left;"><code>Entangled; Restrained; ATK: -20; DEF: -20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Asleep / Slumber</strong></td>
+<td style="text-align: left;">Magic / Religion</td>
+<td style="text-align: left;">Unconscious slumber; wake on injury or duration</td>
+<td style="text-align: left;"><code>Asleep; Unconscious; DEF: Ignore</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Charmed / Enamored</strong></td>
+<td style="text-align: left;">Magic / Religion</td>
+<td style="text-align: left;">Friendly regard; cannot attack caster; compliant</td>
+<td style="text-align: left;"><code>Charmed; Pacified</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Silenced / Mute</strong></td>
+<td style="text-align: left;">Magic / Religion</td>
+<td style="text-align: left;">Cannot speak, chant, or cast verbal spells</td>
+<td style="text-align: left;"><code>Silenced; NO_VERBAL</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Awestruck</strong></td>
+<td style="text-align: left;">Religion / Common</td>
+<td style="text-align: left;">Frozen in reverence; cannot attack; -20 EML</td>
+<td style="text-align: left;"><code>Awestruck; Pacified; ATK: -20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cursed</strong></td>
+<td style="text-align: left;">Religion / Common</td>
+<td style="text-align: left;">Misfortune; -15 penalty on all checks</td>
+<td style="text-align: left;"><code>Cursed; CHECK: -15</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Blessed</strong></td>
+<td style="text-align: left;">Religion / Common</td>
+<td style="text-align: left;">Divine grace; +10 bonus on all checks</td>
+<td style="text-align: left;"><code>Blessed; CHECK: 10; ATK: 10</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Enduring</strong></td>
+<td style="text-align: left;">Religion / Common</td>
+<td style="text-align: left;">Ignores all pain, shock, and fatigue penalties</td>
+<td style="text-align: left;"><code>Enduring; IGNOREPENALTY</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Invisible</strong></td>
+<td style="text-align: left;">Magic / Naveh</td>
+<td style="text-align: left;">Cannot be seen; +20 EML stealth/attack; +20 EML defense</td>
+<td style="text-align: left;"><code>Invisible; ATK: 20; DEF: 20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Hastened</strong></td>
+<td style="text-align: left;">Magic / Peleahn</td>
+<td style="text-align: left;">Speed doubled; +20 Initiative; extra action</td>
+<td style="text-align: left;"><code>Hastened; INIT: 20; SPEED: *2</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Hexed</strong></td>
+<td style="text-align: left;">Psionics</td>
+<td style="text-align: left;">Next skill or all skills rolled at half EML</td>
+<td style="text-align: left;"><code>Hexed; CHECK: /2</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Catatonic / Comatose</strong></td>
+<td style="text-align: left;">Psionic / Magic</td>
+<td style="text-align: left;">Body alive but mind/soul detached; completely helpless</td>
+<td style="text-align: left;"><code>Catatonic; Incapacitated; DEF: Ignore</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dispelled</strong></td>
+<td style="text-align: left;">Magic / Gray</td>
+<td style="text-align: left;">Magical effects suppressed or stripped</td>
+<td style="text-align: left;"><code>Dispelled</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Compiled for the HarnMaster 3.5E Fantasy Grounds Unity development environment.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>
