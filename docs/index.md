@@ -13,6 +13,7 @@ This ruleset implements the HarnMaster 3rd Edition rules for Fantasy Grounds Uni
 * **Realistic Injuries & Healing**: Direct generation of injuries (Minor, Serious, Grievous), blood loss, shock checks, and automated Medical Resolution.
 * **Skill-Based Character Management**: Percentile checks (ML vs. D100), Skill Base (SB) calculations from attributes, Sunsign modifiers, and development tracking.
 * **Magic & Mystic Powers**: Chantry/Convocation spellcasting and ritual tracking.
+* **Print-Ready Character Dossiers**: Export any character to an 8-page print-ready HTML dossier matching the canonical HârnMaster layout for physical printing or offline reference.
 
 ---
 

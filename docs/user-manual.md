@@ -271,6 +271,31 @@ Sunsign affinities automatically grant bonuses to matching skills on the Skills 
 
 ---
 
+### Exporting & Printing Character Profiles {#exporting-printing-characters}
+
+The ruleset includes an automated print generator that creates a comprehensive, **8-page print-ready HTML character dossier** matching the canonical HârnMaster 3.5E publication layout.
+
+**How to Export:**
+1. Open the character sheet (or right-click the character entry in the **Characters** sidebar list).
+2. Click the radial menu or button for **Export Character**.
+3. Choose your destination file in the save dialog.
+
+**What is Generated:**
+Alongside the standard Fantasy Grounds XML record, the ruleset automatically creates a companion `.html` document containing:
+* **Page 1 — Character Profile & Attributes**: Personal statistics, birthdate, Sunsign, height, weight, physical descriptions, attribute ratings with qualitative descriptors (e.g. *Superior*, *Good*, *Fair*), and portrait integration (with in-browser drag-and-drop photo replacement).
+* **Page 2 — Skills & Development**: Complete breakdown of all standard, combat, and lore skills with Skill Bases (SB), Sunsign modifiers, Mastery Levels (ML), and development checks.
+* **Page 3 — Combat, Armor & Weapons**: Dedicated 32-location armor coverage table with per-location Blunt, Edge, Point, and Fire (B/E/P/F) values, plus equipped weapons, combat actions, aim zones, and range brackets.
+* **Page 4 — Trauma & Medical Status**: Active injury logs, wound aspects, healing rates, Universal Penalty (UP), Physical Penalty (PP), and shock recovery data.
+* **Page 5 — Inventory & Encumbrance**: Equipped and carried gear, container assignments, coinage/wealth, and encumbrance totals.
+* **Page 6 — Psionics & Esoteric Talents**: Rare psionic talents, talent MLs, and descriptions.
+* **Page 7 — Shek-Pvar Magic & Rituals**: Arcane convocations, chantries, learned spells, fatigue costs, and clerical invocations.
+* **Page 8 — Background & Family History**: Social class, family genealogy, esthetic traits, and GM/player history notes.
+
+**Printing & Archiving:**
+The exported file is styled with print-optimized CSS (`@media print`). Open the `.html` file in any modern web browser (Chrome, Edge, Firefox, Safari) and press **Ctrl+P** to print directly to paper (A4 / Letter) or save as a digital PDF dossier for offline reference.
+
+---
+
 ## Making Rolls
 
 All rolls in HarnMaster follow a percentile (d100) test compared against the target Mastery Level (ML):
