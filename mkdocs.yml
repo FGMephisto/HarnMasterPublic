@@ -1,7 +1,9 @@
-site_name: HarnMaster 3.5E Ruleset Documentation
-site_description: Official documentation and user manual for HarnMaster 3.5E on Fantasy Grounds Unity
+site_name: HarnMaster 3.5E Ruleset
+site_description: Documentation for HarnMaster 3.5E on Fantasy Grounds Unity
 site_author: Mephisto
 site_url: https://fgmephisto.github.io/HarnMasterPublic/
+repo_url: https://github.com/FGMephisto/HarnMasterPublic
+repo_name: FGMephisto/HarnMasterPublic
 
 theme:
   name: material
@@ -55,3 +57,4 @@ nav:
   - Home: index.md
   - User Manual: user-manual.md
   - Combat Resolution: combat-resolution.md
+  - Status Effects & Conditions: status-effects-reference.md

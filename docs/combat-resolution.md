@@ -80,10 +80,13 @@ When the matrix indicates a successful hit, this panel calculates injury severit
 
 * **Damage Aspect**: Displays the active weapon aspect (**Blunt**, **Edge**, **Point**, or **Fire**). Can be cycled to adjust for special weapon usage or damage types.
 * **Side (Left / Right)**: Indicates whether the left or right side of the body was struck.
+* **Creature Size Difference Impact**: Automatically calculates the difference between attacker and defender size steps (e.g. Medium vs. Large) and applies `±1 impact` per size step difference directly to the base impact.
 * **Base Impact & Effective Impact**:
-    * **Base Impact**: Weapon impact multiplied by the matrix multiplier ($A \times N$).
-    * **Effective Impact (EI)**: Automatically deducts the defender's armor value covering the specific hit location.
+    * **Base Impact**: Weapon impact multiplied by the matrix multiplier (`A * N`), modified by creature size difference.
+    * **Effective Impact (EI)**: Automatically deducts the defender's worn armor value covering the specific hit location.
+    * **Cover Mitigation**: If the target has active Cover (Low Cover, High Cover, or Full Cover) protecting the struck body part, the obstacle's Plate armor rating (B6/E10/P6/F2) is automatically applied to mitigate incoming damage.
 * **Injury Level**: Displays the computed wound severity (**Minor**, **Serious**, **Grievous**, or **Amputation**) based on the body part and remaining Effective Impact.
+* **Multi-Hit & Spell Damage Resolution**: For spells, flurries, or multi-target attacks with multiple strikes, the CRW displays a multi-hit list entry for each strike, allowing individual resolution of strike locations, armor penetration, and resulting injury levels.
 
 ---
 
