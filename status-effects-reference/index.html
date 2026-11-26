@@ -775,18 +775,6 @@
 <li><strong>Numerical Modifier Tags</strong>: Explicit <code>TAG: [n]</code> expressions (<code>ATK:</code>, <code>@ATK:</code>, <code>DEF:</code>, <code>CHECK:</code>, <code>SKILL:</code>, <code>INIT:</code>, <code>SAVE:</code>, <code>SAVEDC:</code>, <code>DMG:</code>, <code>@DMG:</code>) that add or subtract flat values on matching rolls.</li>
 <li><strong>Visual Marker Conditions</strong>: Presets shown in the Combat Tracker and as token status widgets without changing roll totals on their own. Pair a visual condition with a numerical modifier tag whenever you want an automated EML or damage adjustment.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>+-----------------------------------------------------------------------+
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>|                       COMBAT TRACKER EFFECT                           |
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>+-------------------------+----------------------+----------------------+
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>|  Automated Conditions   |  Numerical Modifiers |    Visual Markers    |
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>|  (Prone, Moonlight,     |  (ATK, @ATK, DEF,    |  (Blinded, Stunned,  |
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>|   COVER, Unconscious)   |   CHECK, SKILL, DMG) |   Invisible, Bleed)  |
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>+-------------------------+----------------------+----------------------+
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>|  Adjust EML, CRW cover, |  Add/subtract flat   |  Token icon &amp; CT     |
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>|  turn skip, or recovery |  values on matching  |  reminder; pair with |
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>|  states automatically.    |  rolls.              |  tags for EML mods.  |
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>+-------------------------+----------------------+----------------------+
-</code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Effects Presets Window</p>
 <p>Open the <strong>Effects</strong> sidebar window to drag and drop <strong>LIGHTS</strong> (token vision), <strong>LIGHT CONDITIONS</strong> (<em>Moonlight</em>, <em>Starlight</em>, <em>Near Darkness</em>), and <strong>CONDITIONS</strong> directly onto Combat Tracker entries without typing syntax manually.</p>
