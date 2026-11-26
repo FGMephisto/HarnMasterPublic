@@ -1,131 +1,125 @@
 # Combat Resolution
 
-The **Combat Resolution Window (CRW)** is the central interactive hub in Fantasy Grounds Unity for resolving HarnMaster combat. Whenever an attack is made, this window opens automatically for the Game Master, coordinating the attacker's roll, the defender's tactical response, hit location determinations, armor deductions, and injury generation.
+The **Combat Resolution Window (CRW)** is the GM's central interactive dialog for resolving HarnMaster attacks. Whenever an attack is rolled, a CRW opens automatically for the Game Master to coordinate attacker/defender outcomes, cover mitigation, multi-hit damage, strike locations, and wound application.
 
 ---
 
 ## Overview & Workflow
 
 ```mermaid
-graph TD
-    A[1. Attack Initiated] --> B[CRW Opens for GM]
-    B --> C[2. Defender Action Chosen & Rolled]
-    C --> D[3. Matrix Outcome Calculated]
-    D --> E[4. Hit Location Verified / Adjusted]
-    E --> F[5. Armor Subtracted & Injury Computed]
-    F --> G[6. Click 'Apply Result']
-    G --> H[Wounds, CT Effects & Chat Updated]
+flowchart TD
+    A[1. Attack Rolled] --> B[CRW Opens for GM]
+    B --> C[2. Defender Rolls or Clicks Block / Dodge]
+    C --> D[3. Matrix Result & Hits Table Updated]
+    D --> E[4. Click Roll Damage if Needed]
+    E --> F[5. Review / Override Location, Aspect, Cover, Armor]
+    F --> G[6. Click Apply Result]
+    G --> H[Injuries, CT Wounds & Trauma Prompts Updated]
 ```
 
-1. **Attack Initiated**: A player or GM rolls an attack from the character sheet or Combat Tracker.
-2. **Window Opens**: The Combat Resolution Window opens, populated with the attacker's weapon, roll result, aim zone, and base damage aspect.
-3. **Defender Rolls**: The defender chooses their defense action (Block, Dodge, Counterstrike, or Ignore) and rolls. The CRW updates immediately.
-4. **Outcome Displayed**: The Combat Matrix result is calculated and displayed (e.g. `A*2`, `D*1`, `Block`).
-5. **Hit Location & Armor**: The struck body part is highlighted in the location grid. Effective Impact is computed against the defender's worn armor at that location.
-6. **Confirmation**: The GM reviews or overrides any field and clicks **Apply Result** to apply injuries and effects to the Combat Tracker and character sheet.
+1. **Attack Rolled:** A PC or NPC rolls an attack (with Aim Zone and Range Bracket). The CRW opens pre-filled with attacker, defender, weapon, and rolled test level.
+2. **Defense:** The defender rolls normally—or the GM clicks the CRW's one-click **Block** or **Dodge** buttons—and the matrix **Result** updates immediately.
+3. **Damage:** Players roll weapon damage as usual, or the GM clicks the contextual **Roll Damage (xN)** button for NPC attackers.
+4. **Review & Override:** Adjust **Defender Cover**, strike **Location**, **Face** sub-location, **Left/Right** side, damage **Aspect**, **Impact**, or **Armor** on the fly.
+5. **Apply Result:** Applies wounds to the defender, updates Combat Tracker status, and triggers required Trauma/Save prompts.
 
 ---
 
-## Window Interface Breakdown
+## Window Interface Layout
 
-The Combat Resolution Window is divided into intuitive, collapsible panels:
-
+```text
++-------------------------------------------------------------------+
+|  Attack on: <Defender>                                            |
++-------------------------------------------------------------------+
+|  [Link] <Attacker>  vs.  <Defender>  [Pending (N)]       [Link]   |
+|  Defender Status: Wounds 2 | Fatigue 1 | PP 15 | Prone            |
++-------------------------------------------------------------------+
+|  Attack:        Broadsword                                        |
+|  Attacker Test: [ Marginal Success ▼ ]                            |
+|  Defense:       [ Block ▼ ]                 [ Block ]   [ Dodge ] |
+|  Defender Test: [ Marginal Failure ▼ ]                            |
+|  Defender Cover:[ None ▼ ]                                        |
+|  Result:        A*2 - Attacker Strike (x2)                        |
+|  [ Announce to Chat ]              [ Roll Damage (x2) ]           |
++-------------------------------------------------------------------+
+|  HITS                                                [Edit] [+]   |
+|  Location         Aspect      Imp     Arm     Eff     IL          |
+|  L. Shoulder      [Edge ▼]    [12]    [ 5]     7      S3          |
++-------------------------------------------------------------------+
+|  [ Skull ]   [ Face ]   [> L. Shoulder <]   [ Thorax ]   [ Thigh ]|
+|  [ Left ]    [ Right ]                                            |
++-------------------------------------------------------------------+
+|  [ Apply Result ]                          [ Cancel ]             |
++-------------------------------------------------------------------+
+|  ACTIONS (Defender / Attacker toggle when applicable)             |
++-------------------------------------------------------------------+
 ```
-┌────────────────────────────────────────────────────────┐
-│  Combat Resolution                                     │
-├────────────────────────────────────────────────────────┤
-│  Attacker: Broadsword (ML 65)                          │
-│  Attacker Test: [ Marginal Success (MS)  ▼ ]           │
-│  Defender Action: [ Block                ▼ ]           │
-│  Defender Test: [ Marginal Failure (MF)  ▼ ]           │
-│  Matrix Result: A*2 (Attacker Hits x2)                 │
-│  [ Announce Roll to Chat ]                             │
-├────────────────────────────────────────────────────────┤
-│  Damage Aspect: [ Edge ▼ ]   Side: [ Left ▼ ]          │
-│  Base Impact: [ 12 ]       Effective Impact: [ 7 ]     │
-│  Injury Level: Serious Wound (S3)                      │
-├────────────────────────────────────────────────────────┤
-│  STRIKE LOCATIONS                                      │
-│  [ Skull ]  [ Forearm ]  [ > L. Shoulder < ]  [ Thigh ] │
-├────────────────────────────────────────────────────────┤
-│  [ Apply Result ]                   [ Cancel ]         │
-└────────────────────────────────────────────────────────┘
-```
 
 ---
 
-## 1. Roll Results Panel
+## 1. Header & Status Bar
 
-This section tracks the opposed check and matrix lookup:
-
-* **Attacker Weapon & Test**: Shows the weapon name and attacker success level (**CS** - Critical Success, **MS** - Marginal Success, **MF** - Marginal Failure, **CF** - Critical Failure). The GM can cycle through these if a manual adjustment or GM fiat is desired.
-* **Defender Action**: A cycler allowing selection of the defender's reaction:
-    * **Block**: Uses weapon/shield defense Mastery Level.
-    * **Counterstrike**: Defender attacks simultaneously; both rolls are compared on the matrix.
-    * **Dodge**: Agility-based evasion test.
-    * **Ignore**: Defender takes no defensive action (auto Critical Failure for defense).
-* **Defender Test**: The defender's rolled success level (**CS**, **MS**, **MF**, **CF**).
-* **Matrix Result**: Automatically looks up the interaction in official HarnMaster tables:
-    * `A*1`, `A*2`, `A*3`, `A*4`: Attacker hits with indicated impact multiplier.
-    * `D*1`, `D*2`: Defender counterstrike hits attacker.
-    * `Block` / `Dodge`: Attack is completely neutralized.
-    * `--`: Tactical standoff; neither side deals damage.
-* **Announce Roll**: Clicking this button broadcasts the current attack/defense narrative and matrix result to the chat log for all players to see.
+* **Open Attacker / Defender Sheet Buttons *(link icons left & right)*:** Opens the attacker's or defender's character/NPC sheet directly for quick stat or gear checks.
+* **Matchup Line:** Displays `Attacker vs. Defender`.
+* **Pending (`N`) / Counterstrike Jump Button:** Appears when additional unresolved CRWs are queued or when a linked Counterstrike CRW exists. Click to jump straight to the next pending resolution window (or switch to the linked Counterstrike window).
+* **Defender Status Line:** Live readout of the defender's current wounds, fatigue, Physical Penalty, and active Combat Tracker conditions.
 
 ---
 
-## 2. Damage & Injury Calculation Panel
+## 2. Roll Results Panel
 
-When the matrix indicates a successful hit, this panel calculates injury severity:
-
-* **Damage Aspect**: Displays the active weapon aspect (**Blunt**, **Edge**, **Point**, or **Fire**). Can be cycled to adjust for special weapon usage or damage types.
-* **Side (Left / Right)**: Indicates whether the left or right side of the body was struck.
-* **Creature Size Difference Impact**: Automatically calculates the difference between attacker and defender size steps (e.g. Medium vs. Large) and applies `±1 impact` per size step difference directly to the base impact.
-* **Base Impact & Effective Impact**:
-    * **Base Impact**: Weapon impact multiplied by the matrix multiplier (`A * N`), modified by creature size difference.
-    * **Effective Impact (EI)**: Automatically deducts the defender's worn armor value covering the specific hit location.
-    * **Cover Mitigation**: If the target has active Cover (Low Cover, High Cover, or Full Cover) protecting the struck body part, the obstacle's Plate armor rating (B6/E10/P6/F2) is automatically applied to mitigate incoming damage.
-* **Injury Level**: Displays the computed wound severity (**Minor**, **Serious**, **Grievous**, or **Amputation**) based on the body part and remaining Effective Impact.
-* **Multi-Hit & Spell Damage Resolution**: For spells, flurries, or multi-target attacks with multiple strikes, the CRW displays a multi-hit list entry for each strike, allowing individual resolution of strike locations, armor penetration, and resulting injury levels.
-
----
-
-## 3. Hit Location Grid, Lateral Side Selector & Face Sub-Table
-
-The window includes an interactive body location picker:
-
-* **Automated Roll Selection**: The location determined by the attack roll is automatically highlighted in red.
-* **Manual Override**: The GM can click any location button (e.g., *Skull*, *Thorax*, *Forearm*, *Thigh*) to change the targeted location on the fly; the effective impact and armor values recalculate immediately.
-* **Lateral Side Selection Grid (Left / Right)**: Whenever a lateral location is struck (e.g. *Shoulder*, *Arm*, *Elbow*, *Forearm*, *Hand*, *Thigh*, *Knee*, *Calf*, *Foot*), a secondary side grid dynamically appears below the hit location table:
-    * **Automated Highlight**: Automatically highlights the side determined by the roll (odd roll = Left, even roll = Right).
-    * **Interactive Switching**: Clicking **Left** or **Right** updates the wound location, worn armor calculation, and injury stats immediately.
-* **Face Sub-Location Grid**: If the struck location is **Face**, a secondary sub-grid appears allowing granular targeting for:
-    * *Eye*, *Cheek*, *Nose*, *Mouth*, *Jaw*, or *Ear* (with the lateral side selector appearing if *Eye* or *Ear* is chosen).
+| Control / Field | Type | What It Shows or Does |
+|---|---|---|
+| **Attack** | Read-only | Attacking weapon, spell, or unarmed action name. |
+| **Attacker Test** | Cycler | rolled degree (**Critical Success**, **Marginal Success**, **Marginal Failure**, **Critical Failure**); click to override manually. |
+| **Defense** | Cycler | Defender's reaction (**Block**, **Counterstrike**, **Dodge**, **Ignore**). Selecting **Ignore** treats defense as Critical Failure automatically. |
+| **One-Click `Block`** | Button | Rolls a **Block** check using the defender's highest equipped weapon/shield DML (alerts chat if no blocking weapon is equipped). |
+| **One-Click `Dodge`** | Button | Rolls a **Dodge** check using the defender's Dodge skill (or Agility-based fallback). |
+| **Defender Test** | Cycler | Defender's rolled degree; click to override manually. |
+| **Defender Cover** | Cycler | Cycles **None**, **Low**, **High**, and **Full** cover; automatically reflects Modifier Box cover tags and recalculates covered strike-location protection. |
+| **Result** | Read-only | Color-coded combat matrix outcome (`A*N` Attacker Strike, `M*N` Missile Hit, `B*N` Mutual Strike, `D*N` Defender Counterstrike, `ATA`/`DTA` Tactical Advantage, `AF`/`DF`/`BF` Fumble, `AS`/`DS`/`BS` Stumble, `Block`, `Miss`, `Wild Shot`). |
+| **Announce to Chat** | Button | Broadcasts the current matchup and matrix outcome to players in chat and updates the label to **Announced**. |
+| **Roll Damage (`xN`)** *(contextual)* | Button | Appears automatically beside **Announce to Chat** for NPC attackers when the matrix grants a hit multiplier (`A*N`, `M*N`, `B*N`). Click to roll the NPC's weapon/action damage directly into this CRW. |
 
 ---
 
-## 4. NPC Defender Actions Panel
+## 3. Hits Table (Single & Multi-Hit Resolution)
 
-When attacking an NPC, the window displays the NPC's available actions, traits, and combat powers directly below the damage panel. This allows the GM to quickly review special defenses, resistances, or reactions without needing to open the NPC stat sheet.
+Supports both single-strike melee/missile hits and multi-hit flurries or spells:
+
+* **`+` (Add Hit Location) & Edit Buttons *(header right)*:** Manually append another strike row or toggle delete mode to remove extra hit rows.
+* **Click Any Hit Row:** Selects that row as the active target for the Hit Location, Face Sub-Location, and Left/Right Side override grids below.
+
+| Column | Type | What It Shows or Does |
+|---|---|---|
+| **Location** | Read-only | Struck body location (including *Left* / *Right* or *Face* sub-part when selected). |
+| **Aspect** | Cycler | Cycles **Blunt**, **Edge**, **Point**, and **Fire** for that hit; immediately recalculates against location armor. |
+| **Imp (Total Impact)** | Editable | Rolled impact (automatically incorporates matrix multiplier and creature size difference). Edit directly for manual adjustments. |
+| **Arm (Armor)** | Editable | Defender's armor protection at that location (including obstacle cover protection when **Defender Cover** covers that location). Edit to override. |
+| **Eff (Effective Impact)** | Read-only | Net impact after armor (`Imp - Arm`). |
+| **IL (Injury Level)** | Read-only | Computed injury severity (`M1`, `S2`–`S3`, `G4`–`G5`, etc.). |
 
 ---
 
-## 5. Applying the Result
+## 4. Hit Location, Face Sub-Location & Side Grids
 
-At the bottom of the window:
-
-* **Apply Result**:
-    * Applies the calculated wound directly to the defender's **Injuries Tab**.
-    * Updates current total injury penalties on the character sheet and Combat Tracker.
-    * Generates required **Shock Rolls**, **Stumble/Knockdown** prompts, or **Bleeding** rates in the chat window.
-    * Closes the Combat Resolution Window.
-* **Cancel**: Closes the resolution window without applying any damage or status changes.
+* **Strike Location Buttons:** Highlights the rolled strike location in red. Hovering covered locations notes active cover protection. Click any location button to override the selected hit row and recalculate armor and Injury Level immediately.
+* **Face Sub-Location Grid:** Appears automatically whenever **Face** is selected, offering clickable buttons for **Eye**, **Cheek**, **Nose**, **Mouth**, **Jaw**, and **Ear**.
+* **Lateral Side Selector (`Left` / `Right`):** Appears automatically whenever a lateral body part (or *Eye* / *Ear*) is selected, highlighting the rolled side and letting the GM switch **Left** vs. **Right** with one click.
 
 ---
 
-## Counterstrike Handling
+## 5. NPC Actions Drawer
 
-When a defender chooses **Counterstrike**:
-1. The defender makes an attack roll against the original attacker.
-2. The resolution matrix compares both rolls.
-3. If the defender succeeds, a linked secondary resolution window opens with the roles reversed, allowing immediate resolution of the counterstrike impact and injury.
+When either combatant is an NPC, the **ACTIONS** panel at the bottom displays that NPC's Combat Tracker actions so the GM can inspect traits or trigger follow-up rolls directly from the CRW. If both combatants are NPCs, an **Attacker / Defender** toggle button in the **ACTIONS** header switches which NPC's actions are displayed.
+
+---
+
+## 6. Apply Result, Cancel & Counterstrike Windows
+
+* **Apply Result:**
+  * Writes each calculated injury onto the defender's **Injuries** list (updating **Wounds**, **UP**, and **PP** across the character sheet and Combat Tracker).
+  * Posts the resolved injury summary and triggers required **Shock**, **Stumble**, **Knockback**, **Kill Roll**, or **Amputation** prompts/buttons when applicable.
+  * Closes the CRW.
+* **Cancel:** Closes the CRW without applying any wounds or status changes.
+* **Counterstrike Handling:** Choosing **Counterstrike** compares both attack rolls on the matrix. When the defender wins a counterstrike (`D*N` or mutual `B*N`), the ruleset creates a linked counterstrike CRW with roles reversed; use the header's **Counterstrike** jump button to switch directly between the two linked windows.

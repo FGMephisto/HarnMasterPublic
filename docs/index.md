@@ -8,12 +8,12 @@ This ruleset implements the HarnMaster 3rd Edition rules for Fantasy Grounds Uni
 
 ## Key Features
 
-* **Detailed Hit Location System**: Full implementation of HarnMaster's hit location tables with zone targeting (High, Mid, Low) and specific body part tracking.
-* **Automated Combat Resolution Matrix**: Automated calculation of attacker vs. defender outcomes (Critical/Marginal Success & Failure) using official HarnMaster combat matrices.
-* **Realistic Injuries & Healing**: Direct generation of injuries (Minor, Serious, Grievous), blood loss, shock checks, and automated Medical Resolution.
-* **Skill-Based Character Management**: Percentile checks (ML vs. D100), Skill Base (SB) calculations from attributes, Sunsign modifiers, and development tracking.
-* **Magic & Mystic Powers**: Chantry/Convocation spellcasting and ritual tracking.
-* **Print-Ready Character Dossiers**: Export any character to an 8-page print-ready HTML dossier matching the canonical HârnMaster layout for physical printing or offline reference.
+* **Detailed Hit Location System**: Full implementation of HarnMaster hit location tables with zone aiming (High, Mid, Low) and per-location B/E/P/F armor protection.
+* **Automated Combat Resolution Window**: Interactive attack-vs-defense matrix lookup, one-click Block/Dodge, multi-hit resolution, hit location overrides, cover mitigation, and automatic injury application.
+* **Realistic Injuries & Medical Resolution**: Direct tracking of Minor, Serious, and Grievous wounds, bloodloss, shock/kill/amputation prompts, and the GM Medical Resolution Window (including handoff from Physician sub-rolls).
+* **Skill-Based Character Management**: Seven-tab character sheet with Skill Group icon filtering, percentile skill checks, situational **Sub-Rolls** (for both PCs and NPCs), Skill Base (SB) calculations, Sunsign affinities, and development tracking.
+* **Magic, Religion & Psionics**: Shek-Pvar Convocation filter bar, Religion & Piety tracking, and spell/invocation/psionic action automation.
+* **Print-Ready Character Dossiers**: Export any character to an 8-page print-ready HTML dossier matching the canonical HârnMaster layout, complete with weapon and armor artwork.
 
 ---
 
@@ -40,7 +40,8 @@ The ruleset includes and supports official modules:
 * **HarnMaster Tuzyn Calendar** (`HarnMaster3.5E_Calendar.mod`): Official 360-day Harnic calendar with all 12 months, celestial holidays, and moon phases.
 * **HarnMaster Assets** (`HarnMaster3.5E_Assets.mod`): High-resolution Harnic tabletop decals and atmospheric assets.
 
-> **Automatic Activation**: All installed HarnMaster modules are automatically activated for the Game Master and configured for player auto-load when a campaign is loaded. No manual setup in the Modules activation window is required.
+!!! note "Automatic Activation"
+    All installed HarnMaster modules are automatically activated for the Game Master and configured for player auto-load when a campaign is loaded. No manual setup in the Modules activation window is required.
 
 ---
 

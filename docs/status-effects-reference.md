@@ -28,9 +28,12 @@ In the Fantasy Grounds Unity ruleset, effects applied to characters in the Comba
 
 ## 2. Automated Engine Effects & Keywords
 
+!!! tip "Effects Presets Window"
+    You can apply standard conditions and ambient light levels (*Moonlight*, *Starlight*, *Near Darkness*) without typing effect strings manually by dragging presets directly from the **Effects** sidebar window onto any Combat Tracker entry.
+
 ### A. Core Supported Conditions
 
-These conditions are registered in the ruleset engine (`DataCommon.conditions`) and have direct mechanical automation or dedicated token status icons:
+These conditions are built into the ruleset engine and have direct mechanical automation or dedicated token status icons:
 
 | Condition | In-Game Mechanical Automation | Token Icon |
 | :--- | :--- | :--- |
@@ -53,6 +56,9 @@ These conditions are registered in the ruleset engine (`DataCommon.conditions`) 
 | **Encumbered** | Informational condition tag; physical skills penalized. | `cond_encumbered` |
 | **Stable** | Trauma stabilization state. | — |
 | **Bleeding** / **Bleed** | Informational condition tag for bloodloss tracking. | `cond_bleed` |
+| **Moonlight** | Light condition: -10 EML penalty in the dark to attacks, defenses, and Eyesight attribute checks (other skill checks left to GM discretion). Nocturnal creatures (like Gargun) exempt. | `cond_conceal` |
+| **Starlight** | Light condition: -20 EML penalty in the dark to attacks, defenses, and Eyesight attribute checks (other skill checks left to GM discretion). Nocturnal creatures exempt. | `cond_conceal` |
+| **Near Darkness** | Light condition: -30 EML penalty (some faint light, not pitch black) to attacks, defenses, and Eyesight attribute checks (other skill checks left to GM discretion). Nocturnal creatures exempt. | `cond_conceal` |
 
 ---
 
@@ -69,8 +75,8 @@ Fantasy Grounds evaluates effect strings containing numerical components using t
 | `INIT: [n]` | Initiative | Modifies the calculated initiative roll for the actor. | `INIT: -10` or `INIT: 20` |
 | `[ATTR]: [n]` | Specific Attributes | Flat modifier to specific HarnMaster attributes (`STR`, `DEX`, `AGL`, `END`, `WIL`, `AUR`, `INT`, `EYE`, `HRG`, `SML`, `VOI`, `CML`, `MOR`, `STA`). | `STR: 2; END: 1` |
 
-> [!NOTE]
-> Numerical modifiers in FGU effect strings must always be flat integers (e.g. `CHECK: -20`). Formula expressions, percentages, or division operators like `CHECK: /2` or `SPEED: /2` are **not supported** by the FGU effect parser.
+!!! note "Flat Integer Modifiers Only"
+    Numerical modifiers in FGU effect strings must always be flat integers (e.g. `CHECK: -20`). Formula expressions, percentages, or division operators like `CHECK: /2` or `SPEED: /2` are **not supported** by the FGU effect parser.
 
 ---
 
