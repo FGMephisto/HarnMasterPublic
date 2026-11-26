@@ -1,244 +1,150 @@
 # HarnMaster Status Effects & Conditions Reference
 
-This document provides a reference of status effects, conditions, trauma states, and enchantments in the **HarnMaster 3.5E** ruleset for **Fantasy Grounds Unity (FGU)**.
+This reference lists only the status conditions, tactical tags, numerical modifiers, and conditional keywords that actually work in the **HarnMaster 3.5E** ruleset for **Fantasy Grounds Unity**.
 
 ---
 
 ## 1. How Effects Work in HarnMaster 3.5E
 
-In the Fantasy Grounds Unity ruleset, effects applied to characters in the Combat Tracker fall into two categories:
+Effects placed on Combat Tracker entries (via power **Effect** buttons, automated combat/trauma resolution, or drag-and-drop from the **Effects** window) behave in one of three ways:
 
-1. **Automated Engine Effects**: Recognized keywords and conditions that the ruleset programmatically parses and applies to attack rolls, defense rolls, ability/skill checks, tactical modifiers, or trauma recovery sequences.
-2. **Informational & Descriptive Labels**: Status names or reminder text (such as *Bleeding*, *Burning*, or *Infected*) displayed on tokens and in the Combat Tracker to remind the GM and players of ongoing conditions that require manual tracking or narrative resolution according to tabletop HarnMaster rules.
+1. **Automated Conditions & Tactical Tags**: Recognized directly by the HarnMaster roll engine, the Combat Resolution Window (CRW), or trauma recovery automation.
+2. **Numerical Modifier Tags**: Explicit `TAG: [n]` expressions (`ATK:`, `@ATK:`, `DEF:`, `CHECK:`, `SKILL:`, `INIT:`, `SAVE:`, `SAVEDC:`, `DMG:`, `@DMG:`) that add or subtract flat values on matching rolls.
+3. **Visual Marker Conditions**: Presets shown in the Combat Tracker and as token status widgets without changing roll totals on their own. Pair a visual condition with a numerical modifier tag whenever you want an automated EML or damage adjustment.
 
+```text
++-----------------------------------------------------------------------+
+|                       COMBAT TRACKER EFFECT                           |
++-------------------------+----------------------+----------------------+
+|  Automated Conditions   |  Numerical Modifiers |    Visual Markers    |
+|  (Prone, Moonlight,     |  (ATK, @ATK, DEF,    |  (Blinded, Stunned,  |
+|   COVER, Unconscious)   |   CHECK, SKILL, DMG) |   Invisible, Bleed)  |
++-------------------------+----------------------+----------------------+
+|  Adjust EML, CRW cover, |  Add/subtract flat   |  Token icon & CT     |
+|  turn skip, or recovery |  values on matching  |  reminder; pair with |
+|  states automatically.    |  rolls.              |  tags for EML mods.  |
++-------------------------+----------------------+----------------------+
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    COMBAT TRACKER EFFECT                    │
-├──────────────────────────────┬──────────────────────────────┤
-│    Automated Engine Tags     │    Informational Labels      │
-│  (ATK, DEF, CHECK, Prone,    │   (Bleeding, Burning,        │
-│   Invisible, Unconscious)    │    Infected, Diseased)       │
-├──────────────────────────────┼──────────────────────────────┤
-│ Applied directly to rolls,   │ Visual widget & GM reminder; │
-│ EML calculations & saves.    │ resolved manually per round. │
-└──────────────────────────────┴──────────────────────────────┘
-```
-
----
-
-## 2. Automated Engine Effects & Keywords
 
 !!! tip "Effects Presets Window"
-    You can apply standard conditions and ambient light levels (*Moonlight*, *Starlight*, *Near Darkness*) without typing effect strings manually by dragging presets directly from the **Effects** sidebar window onto any Combat Tracker entry.
-
-### A. Core Supported Conditions
-
-These conditions are built into the ruleset engine and have direct mechanical automation or dedicated token status icons:
-
-| Condition | In-Game Mechanical Automation | Token Icon |
-| :--- | :--- | :--- |
-| **Prone** | Attacker: suffers disadvantage / penalty on attacks. Target: standing attackers gain tactical advantage; prone defenders suffer penalty on defense. | `cond_prone` |
-| **Invisible** | Grants `ADVATK` (+20 EML tactical advantage) to attacks. Attackers without special awareness suffer tactical disadvantage against the invisible target. | `cond_invisible` |
-| **Blinded** | Imposes `DISATK` (-20 EML penalty) on all attack rolls. | `cond_blinded` |
-| **Frightened** | Imposes `DISATK` on attack rolls and `DISCHK` on ability/skill checks. | `cond_frightened` |
-| **Intoxicated** | Imposes `DISATK` on attack rolls and `DISCHK` on ability/skill checks. | — |
-| **Poisoned** | Imposes `DISATK` on attack rolls and `DISCHK` on ability/skill checks. | `cond_sickened` |
-| **Restrained** / **Grappled** | Imposes `DISATK` on attacks and limits mobility. | `cond_restrained` / `cond_grappled` |
-| **Paralyzed** / **Petrified** | Actor is frozen and incapable of making physical attacks or actions. | `cond_paralyzed` |
-| **Stunned** | Actor cannot initiate offensive actions; defense rolls penalized. | `cond_stunned` |
-| **Unconscious** | Helpless state. Automatically drops Prone. Defenses cannot be mounted (uncontested hits). Governs the automated Shock Recovery system. | `cond_unconscious` |
-| **Incapacitated** | Transitional trauma state between Unconscious and Shock or full recovery. Automatically rolls shock checks on recovery. | `cond_paralyzed` |
-| **Shock** | Critical medical trauma state (Healing Rate H5). Triggers 4-hour recovery cycles. | `cond_paralyzed` |
-| **Surprised** | Tactical surprise state. | `cond_disadvantage` |
-| **Deafened** | Informational condition tag; acoustic awareness checks penalized. | `cond_deafened` |
-| **Charmed** | Informational condition tag; social/allegiance tracking. | `cond_charmed` |
-| **Cursed** | Informational condition tag; can be paired with `CHECK: -10`. | `cond_sickened` |
-| **Encumbered** | Informational condition tag; physical skills penalized. | `cond_encumbered` |
-| **Stable** | Trauma stabilization state. | — |
-| **Bleeding** / **Bleed** | Informational condition tag for bloodloss tracking. | `cond_bleed` |
-| **Moonlight** | Light condition: -10 EML penalty in the dark to attacks, defenses, and Eyesight attribute checks (other skill checks left to GM discretion). Nocturnal creatures (like Gargun) exempt. | `cond_conceal` |
-| **Starlight** | Light condition: -20 EML penalty in the dark to attacks, defenses, and Eyesight attribute checks (other skill checks left to GM discretion). Nocturnal creatures exempt. | `cond_conceal` |
-| **Near Darkness** | Light condition: -30 EML penalty (some faint light, not pitch black) to attacks, defenses, and Eyesight attribute checks (other skill checks left to GM discretion). Nocturnal creatures exempt. | `cond_conceal` |
+    Open the **Effects** sidebar window to drag and drop **LIGHTS** (token vision), **LIGHT CONDITIONS** (*Moonlight*, *Starlight*, *Near Darkness*), and **CONDITIONS** directly onto Combat Tracker entries without typing syntax manually.
 
 ---
 
-### B. Numerical Modifier Keywords
+## 2. Automated Conditions & Tactical Tags
 
-Fantasy Grounds evaluates effect strings containing numerical components using the format `TAG: [number]`. The following modifier tags are active in the HarnMaster 3.5E ruleset:
+### A. Combat Stance, Lighting, Cover & Target Size
 
-| Keyword Syntax | Affected Rolls | Description | Example |
-| :--- | :--- | :--- | :--- |
-| `ATK: [n]` | Melee & Ranged Attacks | Adds or subtracts flat EML from attack rolls. | `ATK: 20` or `ATK: -10` |
-| `@ATK: [n]` | Incoming Attacks | Modifies incoming attacks against the targeted actor. | `@ATK: -20` |
-| `DEF: [n]` | Defense Rolls | Adds or subtracts flat EML from Dodge, Block, or Counterstrike rolls. | `DEF: -20` or `DEF: 10` |
-| `CHECK: [n]` | Ability & Skill Checks | Adds or subtracts flat EML from general skill and attribute checks. | `CHECK: -15` |
-| `INIT: [n]` | Initiative | Modifies the calculated initiative roll for the actor. | `INIT: -10` or `INIT: 20` |
-| `[ATTR]: [n]` | Specific Attributes | Flat modifier to specific HarnMaster attributes (`STR`, `DEX`, `AGL`, `END`, `WIL`, `AUR`, `INT`, `EYE`, `HRG`, `SML`, `VOI`, `CML`, `MOR`, `STA`). | `STR: 2; END: 1` |
+| Condition / Tag | What the Ruleset Automates |
+|---|---|
+| **`Prone`** | **Attacker:** `-20 EML` on melee and ranged attacks; flags **High** aim zone as out of reach. **Defender:** `-20 EML` on defense rolls (**Block**, **Dodge**, **Counterstrike**); melee attackers gain `+20 EML`; ranged attackers take `-15 EML` (unless behind Cover). Applied automatically on failed **Stumble**, **Knockback**, **Shock**, or **Amputation** rolls. |
+| **`Moonlight`** | Applies `-10 EML` to attacks, defenses, and **Eyesight** attribute checks. Nocturnal creatures (such as Gargun) are automatically exempt. Other skill checks remain at GM discretion. |
+| **`Starlight`** *(or `Twilight`)* | Applies `-20 EML` to attacks, defenses, and **Eyesight** attribute checks. Nocturnal creatures are automatically exempt. |
+| **`Near Darkness`** *(or `Darkness`)* | Applies `-30 EML` to attacks, defenses, and **Eyesight** attribute checks. Nocturnal creatures are automatically exempt. |
+| **`COVER`** | Low Cover: `-10 EML` on incoming attacks and enables obstacle Plate protection (`B6/E10/P6/F2`) on covered strike locations in the CRW. |
+| **`SCOVER`** | High Cover: `-20 EML` on incoming attacks and enables obstacle Plate protection (`B6/E10/P6/F2`) on covered strike locations in the CRW. |
+| **`FULLCOVER`** *(or `TCOVER`)* | Full Cover: `-20 EML` on incoming attacks and applies obstacle Plate protection (`B6/E10/P6/F2`) across all strike locations in the CRW. |
+| **`SIZE: <1ft`** | Placed on target: `-20 EML` on incoming ranged attacks. |
+| **`SIZE: 1-2ft`** | Placed on target: `-15 EML` on incoming ranged attacks. |
+| **`SIZE: 2-4ft`** | Placed on target: `-10 EML` on incoming ranged attacks. |
+| **`SIZE: 6-8ft`** | Placed on target: `+10 EML` on incoming ranged attacks. |
+| **`SIZE: 8-16ft`** | Placed on target: `+15 EML` on incoming ranged attacks. |
+| **`SIZE: 16-32ft`** | Placed on target: `+20 EML` on incoming ranged attacks. |
 
-!!! note "Flat Integer Modifiers Only"
-    Numerical modifiers in FGU effect strings must always be flat integers (e.g. `CHECK: -20`). Formula expressions, percentages, or division operators like `CHECK: /2` or `SPEED: /2` are **not supported** by the FGU effect parser.
+!!! warning "Do Not Stack ATK / DEF Penalties onto `Prone`"
+    Because **`Prone`** already applies `-20 EML` to attacks and `-20 EML` to defenses automatically, writing `Prone; ATK: -20; DEF: -20` double-penalizes the combatant (`-40 EML`). Use **`Prone`** by itself.
 
----
+### B. Automated Trauma, Recovery & Wound Conditions
 
-### C. Tactical & Conditional Effect Tags
-
-| Keyword Tag | Mechanical Behavior in Ruleset |
-| :--- | :--- |
-| `ADVATK` / `@ADVATK` | Forces Tactical Advantage (+20 EML) on attacks. |
-| `DISATK` / `@DISATK` | Forces Tactical Disadvantage (-20 EML) on attacks. |
-| `GRANTADVATK` | Any attacker targeting this actor gains Tactical Advantage (+20 EML). |
-| `GRANTDISATK` | Any attacker targeting this actor suffers Tactical Disadvantage (-20 EML). |
-| `ADVCHK` / `DISCHK` | Grants advantage or disadvantage on skill and ability checks. |
-| `ADVINIT` / `DISINIT` | Grants advantage or disadvantage on initiative rolls. |
-| `COVER` / `SCOVER` / `FULLCOVER` | Applies standard cover modifiers to defense and ranged targeting. |
-| `SIZE: <1ft` to `SIZE: 16-32ft` | Ranged size modifier tags (from -20 to +20 EML) when targeting creatures of non-human scale. |
-
----
-
-## 3. Trauma & Recovery System Automation
-
-HarnMaster 3.5E features automated state progression for trauma checks (Shock Rolls) triggered by injury or recovery:
-
-```
-                      ┌──────────────────────┐
-                      │   Suffers Injury     │
-                      └──────────┬───────────┘
-                                 │
-                                 ▼
-                      ┌──────────────────────┐
-                      │     Shock Roll       │
-                      │  (1d6 per UP vs END) │
-                      └──────────┬───────────┘
-                                 │
-                     ┌───────────┴───────────┐
-                     ▼                       ▼
-                 [Pass]                   [Fail]
-             No change in              Collapses:
-             consciousness           ┌───────────────────────────────┐
-                                     │ • Effect: "Unconscious"       │
-                                     │ • Effect: "Prone"             │
-                                     │ • Defenses: Uncontested       │
-                                     └───────────────┬───────────────┘
-                                                     │
-                                                     │ 1-minute / 10-minute
-                                                     │ Recovery Roll
-                                                     ▼
-                                     ┌───────────────────────────────┐
-                                     │     Recovery Shock Roll       │
-                                     └───────────────┬───────────────┘
-                                                     │
-                                     ┌───────────────┴───────────────┐
-                                     ▼                               ▼
-                                  [Pass]                          [Fail]
-                         Transition to Recovery:            Remains Unconscious
-                         ┌─────────────────────────┐
-                         │ • Removes Unconscious   │
-                         │ • Effect: Incapacitated │
-                         │ • Immediate Shock Check │
-                         └───────────┬─────────────┘
-                                     │
-                     ┌───────────────┴───────────────┐
-                     ▼                               ▼
-                  [Pass]                          [Fail]
-          Full Recovery from Shock:         Degrades into Deep Shock:
-          ┌───────────────────────┐         ┌─────────────────────────┐
-          │ Removes Incapacitated │         │ • Removes Incapacitated │
-          │ Returns to action     │         │ • Effect: "Shock"       │
-          └───────────────────────┘         │ • Healing Rate H5 state │
-                                            └─────────────────────────┘
-```
-
-* **Unconscious**: Applied automatically when failing a Shock roll. The character collapses (`Prone; Unconscious`), drops weapons, and cannot make defense rolls (opponents make uncontested strikes).
-* **Incapacitated**: Applied automatically when passing an Unconscious recovery roll. Triggers an immediate follow-up Shock check. If passed, the character recovers completely; if failed, the character degrades into medical **Shock**.
-* **Shock**: Represents the critical physiological shock state (HarnMaster Healing Rate H5). Requires medical intervention and daily 4-hour recovery rolls (`HR × END`).
+| Condition | What the Ruleset Automates |
+|---|---|
+| **`Unconscious`** | Applied automatically with **`Prone`** when failing a **Shock** roll. Suppresses duplicate shock prompts on non-lethal hits, drives automated Shock Recovery progression, and automatically skips NPC turns in the Combat Tracker. |
+| **`Incapacitated`** | Applied automatically when passing an **Unconscious** recovery roll, triggering an immediate follow-up Shock roll. Passing removes `Incapacitated`; failing replaces it with **`Shock`**. |
+| **`Shock`** | Applied automatically when failing recovery from `Incapacitated` (Medical Shock state). Removed automatically when a **Shock Recovery** test succeeds in the Medical Resolution Window. |
+| **`Dead`** | Applied automatically on a failed **Kill Roll** or when total Wounds reach or exceed **Endurance**. Updates the Combat Tracker health status to **Dead** and suppresses further Shock prompts. |
+| **`Surprised`** | Displays the token widget and automatically clears when the combatant ends their turn in the Combat Tracker. |
+| **`Bleeding; <Location>`** | Added automatically on qualifying bleeder wounds when **Combat: Bleeders** is enabled in Options, and removed automatically when staunched/treated in the Medical Resolution Window. |
+| **`<Location> unusable`** / **`<Location> severed`** | Added automatically on qualifying limb injuries or amputations when **Combat: Limb injuries** / **Combat: Amputations** are enabled; `severed` replaces `unusable` and prevents repeat amputation checks on the same limb. |
 
 ---
 
-## 4. Physical Combat & Tabletop Conditions Reference
+## 3. Numerical Modifier Tags & Conditionals
 
-The table below outlines common tabletop conditions, noting their actual rule mechanics and the corresponding valid FGU effect syntax:
+Use `TAG: [n]` syntax (for example `ATK: -20` or `SKILL: 10, sword`) to modify rolls numerically. Semicolons separate multiple components in one effect line (for example `Blinded; ATK: -40; DEF: -20`).
 
-| Condition | HarnMaster Rule Mechanics | FGU Implementation & Effect String | Automation Level |
-| :--- | :--- | :--- | :--- |
-| **Prone (Knockdown)** | Character on ground. -20 EML to attacks and defenses. Standing foes gain +20 EML. Costs movement to stand. | `Prone; ATK: -20; DEF: -20` | **Automated** (via `Prone` condition & flat modifiers) |
-| **Stumble** | Failed Agility test from knockback or leg injury. Character drops Prone. | `Prone; ATK: -20; DEF: -20` | **Automated** (apply Prone) |
-| **Fumble** | Dropped weapon or lost guard from critical failure or arm injury. | Narrative resolution; disarm/drop weapon | **Manual** |
-| **Bleeder (Bloodloss)** | Grievous wound generates 1 Bloodloss Point (BP) per minute. Exsanguination if BPs exceed Endurance. | `Bleeding` (shows `cond_bleed` icon) | **Informational** (tracked via Injuries tab / manual BPs) |
-| **Crippled Limb** | G4/G5 extremity injury. Limb unusable until healed to M1. | `CHECK: -20` (applied to affected limb skills) | **Semi-Automated** (flat modifier) |
-| **Blinded (Complete)** | Both eyes destroyed or blinded by flash/magic. -40 EML attack, -20 EML defense. | `Blinded; ATK: -40; DEF: -20` | **Automated** |
-| **Deafened** | Loss of hearing from trauma or blast. Acoustic awareness fails automatically. | `Deafened; CHECK: -30` | **Semi-Automated** (shows icon; check penalty applies) |
-| **Fatigue (FL)** | Exertion or heavy armor. Each level adds +1 to Universal Penalty (UP). | Native **FT** box on character sheet / CT | **Automated** (native engine counter) |
-| **Encumbered** | Load exceeds capacity. Movement halved; physical skills penalized. | `Encumbered; CHECK: -10` | **Semi-Automated** |
-| **Infected** | Wound fails 5-day healing roll. Evaluated daily on Infection Table. | `Infected` | **Informational** (GM tracks daily HR progression) |
-| **Diseased** | Pathogen exposure. Causes fever, chills, or weakness (-10 to -30 penalty). | `Diseased; CHECK: -20` | **Semi-Automated** |
-| **Poisoned** | Venom exposure (irritant, paralytic, or lethal). | `Poisoned; CHECK: -20; ATK: -20` | **Automated** (applies disadvantage/penalties) |
-| **Burning (On Fire)** | Character on fire. Takes 1d6 Fire damage each round until extinguished. | `Burning` | **Informational** (GM rolls 1d6 F damage on turn) |
-| **Frightened / Morale Broken** | Failed morale check. Must flee or surrender; cannot initiate attacks. | `Frightened; ATK: -20; DEF: -10` | **Automated** (forces disadvantage & attack penalties) |
-| **Tactical Advantage (TA)** | Won combat exchange or tactical position. +20 EML on next strike. | `ATK: 20` | **Automated** |
-| **Tactical Disadvantage** | Outmaneuvered or poor footing. -20 EML on next action. | `ATK: -20; DEF: -20` | **Automated** |
+### Working Modifier Tags
 
----
+| Keyword Syntax | Affected Rolls | Filter / Targeting Notes | Example |
+|---|---|---|---|
+| `ATK: [n]` | Melee & ranged attack rolls (on attacker) | Optional `, melee` or `, ranged` filter | `ATK: 20` or `ATK: -10, ranged` |
+| `@ATK: [n]` | Incoming attack rolls (placed on defender) | Optional `, melee` or `, ranged` filter | `@ATK: -20` |
+| `DEF: [n]` | Defense rolls (**Block**, **Dodge**, **Counterstrike**) | — | `DEF: -20` or `DEF: 10` |
+| `CHECK: [n]` | Attribute checks, skill checks, and initiative | Optional attribute filter (e.g. `, eyesight`) | `CHECK: -15` or `CHECK: 10, eyesight` |
+| `SKILL: [n]` | Skill checks | Optional skill name filter | `SKILL: -10` or `SKILL: 10, sword` |
+| `INIT: [n]` | Initiative rolls | — | `INIT: 10` or `INIT: -10` |
+| `SAVE: [n]` | Power saves, **Fumble**, **Stumble**, and **Amputation** | Optional save filter; does **not** apply to Shock or Kill rolls | `SAVE: -10` or `SAVE: 10, magic` |
+| `SAVEDC: [n]` | Target number of triggered saves (placed on caster) | — | `SAVEDC: 10` |
+| `DMG: [n]` | Weapon/spell damage rolls (on attacker) | Optional damage type filter (`blunt`, `edge`, `point`, `fire`) | `DMG: 2` or `DMG: 2, fire` |
+| `@DMG: [n]` | Incoming rolled damage (placed on defender) | Optional damage type filter | `@DMG: -2` |
 
-## 5. Supernatural Powers & Spells Effect Configuration
+!!! note "Unsupported 5E / D20 Effect Syntax"
+    * Numerical modifiers must always be flat integers (e.g. `CHECK: -20`). Division or formulas such as `CHECK: /2` or `SPEED: /2` are **not supported**.
+    * 5E advantage/disadvantage tags (`ADVATK`, `DISATK`, `GRANTADVATK`, `GRANTDISATK`, `ADVCHK`, `DISCHK`, `ADVINIT`, `DISINIT`) and direct attribute modifiers (`STR: 2`, `END: 1`, etc.) do **not** modify HarnMaster percentile rolls. Use explicit flat EML or damage tags (`ATK:`, `DEF:`, `CHECK:`, `SKILL:`, `INIT:`, `SAVE:`, `DMG:`) instead.
 
-When configuring spell action sets, psionic powers, or divine miracles in Fantasy Grounds Unity, use these standard effect strings:
+### Conditional Effects (`IF:` / `IFT:`)
 
-### Arcane Magic (*Shek-Pvar*)
-* **Globe of Setath (Savorya / Mind)**:
-  * *Critical/Marginal Failure on Save*: `Stunned; DEF: -20`
-  * *Marginal Success on Save*: `CHECK: -10; DEF: -10`
-* **Invisibility (Lyahvi / Air & Light)**:
-  * `Invisible` *(automatically applies tactical advantage to attacker and disadvantage to foes)*
-* **Flesh of Stone / Earth Armour (Fyvria / Earth)**:
-  * Armor protection bonuses are configured directly on the hit location or item record.
-* **Haste / Quickening (Peleahn / Fire)**:
-  * `INIT: 20; ATK: 10`
-* **Web / Entanglement (Fyvria / Earth)**:
-  * `Restrained; ATK: -20; DEF: -20`
-* **Slumber / Deep Sleep (Savorya / Mind)**:
-  * `Unconscious; Prone`
+You can gate modifier tags on the actor's own state (`IF:`) or the target's state (`IFT:`) using recognized conditions, health states (`healthy`, `wounded`, `bloodied`), or `CUSTOM(...)` markers:
 
-### Divine Invocations & Miracles
-* **Blessing / Divine Favor (Common)**:
-  * `Blessed; CHECK: 10; ATK: 10`
-* **Curse / Malison (Common)**:
-  * `Cursed; CHECK: -10; ATK: -10`
-* **Holy Radiance / Awe (Larani / Honor & War)**:
-  * `Awestruck; ATK: -20`
-* **Battle Fury (Sarajin / Battle & Frost)**:
-  * `Berserk; ATK: 20` *(GM manually ignores pain/shock checks)*
-* **Sanctuary / Pacification (Peoni / Mercy & Healing)**:
-  * `Sanctuary; DEF: 20`
-* **Silence (Save-K'nor / Order & Riddles)**:
-  * `Silenced` *(narrative/informational; prevents verbal casting)*
+* `IFT: Prone; ATK: 10` — Adds `+10 EML` to attacks against a `Prone` target.
+* `IF: wounded; CHECK: -10` — Applies `-10 EML` to checks while the actor has wounds.
+* `IFT: CUSTOM(Marked); ATK: 10` — Adds `+10 EML` against targets bearing a `Marked` effect label.
 
 ---
 
-## 6. Master FGU Effect Syntax Cheat Sheet
+## 4. Visual Marker Conditions (Effects Presets)
 
-Use this quick-reference table when building character sheets, NPC actions, and item effects in Fantasy Grounds Unity:
+All remaining presets in **Effects → CONDITIONS** display a token status widget and Combat Tracker label only—they do **not** apply hidden penalties automatically. Pair them with numerical tags when mechanical EML adjustments are needed:
 
-| Desired Mechanical Result | Valid FGU Effect String | Notes |
-| :--- | :--- | :--- |
-| **Attack Bonus** | `ATK: 20` | Adds +20 EML to attack rolls |
-| **Attack Penalty** | `ATK: -20` | Subtracts 20 EML from attack rolls |
-| **Defense Bonus** | `DEF: 20` | Adds +20 EML to Dodge/Block/Counterstrike |
-| **Defense Penalty** | `DEF: -20` | Subtracts 20 EML from Dodge/Block/Counterstrike |
-| **General Skill / Check Bonus** | `CHECK: 10` | Adds +10 EML to all attribute and skill checks |
-| **General Skill / Check Penalty** | `CHECK: -15` | Subtracts 15 EML from all attribute and skill checks |
+| Preset Condition | Behavior & Optional Paired Modifier Example |
+|---|---|
+| **`Blinded`** | Visual token marker. Example with manual modifiers: `Blinded; ATK: -40; DEF: -20` |
+| **`Charmed`** | Visual token marker (social/allegiance reminder). |
+| **`Cursed`** | Visual token marker. Example: `Cursed; CHECK: -10; ATK: -10` |
+| **`Deafened`** | Visual token marker. Example: `Deafened; CHECK: -30, hearing` |
+| **`Encumbered`** | Visual token marker (encumbrance penalty is normally driven by Inventory **Penalty Base** → **PP**). Example for ad-hoc penalties: `Encumbered; CHECK: -10` |
+| **`Frightened`** | Visual token marker. Example: `Frightened; ATK: -20; DEF: -10` |
+| **`Grappled`** | Visual token marker. Example: `Grappled; ATK: -20; DEF: -20` |
+| **`Intoxicated`** | Visual token marker. Example: `Intoxicated; CHECK: -10; ATK: -10` |
+| **`Invisible`** | Visual token marker. Example to penalize incoming attacks: `Invisible; @ATK: -20` |
+| **`Paralyzed`** | Visual token marker (reminder that actor cannot act). |
+| **`Petrified`** | Visual token marker. |
+| **`Poisoned`** | Visual token marker. Example: `Poisoned; CHECK: -20; ATK: -20` |
+| **`Restrained`** | Visual token marker. Example: `Restrained; ATK: -20; DEF: -20` |
+| **`Stable`** | Visual stabilization marker in the Combat Tracker. |
+| **`Stunned`** | Visual token marker. Example: `Stunned; DEF: -20` |
+| **`Bleeding`** / **`Bleed`** | Visual bleeder icon (also added automatically as `Bleeding; <Location>` when **Combat: Bleeders** is active). |
+
+!!! tip "Fatigue & Encumbrance Are Native"
+    **Fatigue (FT)** on the sheet header / Combat Tracker and **Encumbrance** on the **Inventory** tab automatically compute **Universal Penalty (UP)** and **Physical Penalty (PP)** across rolls—no manual effect tags are needed for them.
+
+---
+
+## 5. Working Effect Syntax Cheat Sheet
+
+| Desired Result | Verified Working Effect String | Behavior |
+|---|---|---|
+| **Attack Bonus / Penalty** | `ATK: 20` / `ATK: -10` | Adds or subtracts EML on attacker's attack rolls |
+| **Incoming Attack Penalty** | `@ATK: -20` | Subtracts 20 EML from attacks targeting this actor |
+| **Defense Bonus / Penalty** | `DEF: 20` / `DEF: -20` | Adds or subtracts EML on Block, Dodge, and Counterstrike |
+| **Attribute & Skill Check Mod** | `CHECK: -15` | Subtracts 15 EML from attribute and skill checks |
+| **Specific Skill Mod** | `SKILL: 10, sword` | Adds +10 EML to Sword skill checks |
 | **Initiative Modifier** | `INIT: 10` or `INIT: -10` | Adjusts initiative roll |
-| **Tactical Advantage on Attacks** | `ADVATK` | Forces tactical advantage on attack rolls |
-| **Tactical Disadvantage on Attacks** | `DISATK` | Forces tactical disadvantage on attack rolls |
-| **Attacker Advantage Against Target** | `GRANTADVATK` | Anyone attacking this target gains tactical advantage |
-| **Full Cover** | `FULLCOVER` | Applies full cover modifiers against ranged attacks |
-| **Target Scale (Tiny to Huge)** | `SIZE: <1ft` to `SIZE: 16-32ft` | Modifies ranged attack EML based on target size |
-| **Knockdown / Prone** | `Prone; ATK: -20; DEF: -20` | Standard prone combat state |
-| **Complete Blindness** | `Blinded; ATK: -40; DEF: -20` | Standard blindness combat state |
-| **Unconscious Collapse** | `Unconscious; Prone` | Marks character helpless; triggers shock recovery |
-| **Shock Recovery State** | `Incapacitated` | Triggers shock check upon recovery |
-| **Critical Trauma State** | `Shock; CHECK: -20` | Critical medical state (H5) |
-| **Bloodloss Marker** | `Bleeding` | Displays bleed token icon; tracked manually |
-| **Fire Hazard Marker** | `Burning` | Reminder tag; GM rolls 1d6 F damage per round |
-
----
-*Reference manual compiled for the HarnMaster 3.5E ruleset on Fantasy Grounds Unity.*
+| **Save Modifier** | `SAVE: -10` | Adjusts power saves, Fumble, Stumble, and Amputation |
+| **Damage Bonus / Mitigation** | `DMG: 2` / `@DMG: -2` | Adjusts outgoing or incoming rolled damage |
+| **Prone Stance** | `Prone` | Auto-applies `-20 EML` atk/def, `+20` melee vs. target, `-15` ranged vs. target |
+| **Darkness Levels** | `Moonlight` / `Starlight` / `Near Darkness` | Auto-applies `-10` / `-20` / `-30` EML on atk, def, and Eyesight (nocturnal exempt) |
+| **Cover** | `COVER` / `SCOVER` / `FULLCOVER` | Auto-applies `-10` / `-20` / `-20` EML and CRW obstacle Plate protection |
+| **Ranged Target Size** | `SIZE: <1ft` to `SIZE: 16-32ft` | Auto-applies `-20` to `+20` EML on incoming ranged attacks |
+| **Blinded (With Penalties)** | `Blinded; ATK: -40; DEF: -20` | Displays Blinded icon and applies `-40` attack / `-20` defense EML |
+| **Invisible (With Penalties)** | `Invisible; @ATK: -20` | Displays Invisible icon and imposes `-20 EML` on incoming attacks |
+| **Conditional Strike Bonus** | `IFT: Prone; ATK: 10` | Grants `+10 EML` when attacking a Prone target |

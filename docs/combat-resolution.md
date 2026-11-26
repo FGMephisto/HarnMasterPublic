@@ -6,17 +6,6 @@ The **Combat Resolution Window (CRW)** is the GM's central interactive dialog fo
 
 ## Overview & Workflow
 
-```mermaid
-flowchart TD
-    A[1. Attack Rolled] --> B[CRW Opens for GM]
-    B --> C[2. Defender Rolls or Clicks Block / Dodge]
-    C --> D[3. Matrix Result & Hits Table Updated]
-    D --> E[4. Click Roll Damage if Needed]
-    E --> F[5. Review / Override Location, Aspect, Cover, Armor]
-    F --> G[6. Click Apply Result]
-    G --> H[Injuries, CT Wounds & Trauma Prompts Updated]
-```
-
 1. **Attack Rolled:** A PC or NPC rolls an attack (with Aim Zone and Range Bracket). The CRW opens pre-filled with attacker, defender, weapon, and rolled test level.
 2. **Defense:** The defender rolls normally—or the GM clicks the CRW's one-click **Block** or **Dodge** buttons—and the matrix **Result** updates immediately.
 3. **Damage:** Players roll weapon damage as usual, or the GM clicks the contextual **Roll Damage (xN)** button for NPC attackers.

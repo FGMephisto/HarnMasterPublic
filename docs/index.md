@@ -10,10 +10,10 @@ This ruleset implements the HarnMaster 3rd Edition rules for Fantasy Grounds Uni
 
 * **Detailed Hit Location System**: Full implementation of HarnMaster hit location tables with zone aiming (High, Mid, Low) and per-location B/E/P/F armor protection.
 * **Automated Combat Resolution Window**: Interactive attack-vs-defense matrix lookup, one-click Block/Dodge, multi-hit resolution, hit location overrides, cover mitigation, and automatic injury application.
-* **Realistic Injuries & Medical Resolution**: Direct tracking of Minor, Serious, and Grievous wounds, bloodloss, shock/kill/amputation prompts, and the GM Medical Resolution Window (including handoff from Physician sub-rolls).
+* **Injuries & Medical Resolution**: Direct tracking of Minor, Serious, and Grievous wounds, bloodloss, shock/kill/amputation prompts, and the GM Medical Resolution Window (including handoff from Physician sub-rolls).
 * **Skill-Based Character Management**: Seven-tab character sheet with Skill Group icon filtering, percentile skill checks, situational **Sub-Rolls** (for both PCs and NPCs), Skill Base (SB) calculations, Sunsign affinities, and development tracking.
 * **Magic, Religion & Psionics**: Shek-Pvar Convocation filter bar, Religion & Piety tracking, and spell/invocation/psionic action automation.
-* **Print-Ready Character Dossiers**: Export any character to an 8-page print-ready HTML dossier matching the canonical HârnMaster layout, complete with weapon and armor artwork.
+* **Print-Ready Character Dossiers**: Export any character to an 8-page print-ready HTML dossier, complete with weapon and armor artwork.
 
 ---
 
