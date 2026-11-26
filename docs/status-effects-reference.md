@@ -12,20 +12,6 @@ Effects placed on Combat Tracker entries (via power **Effect** buttons, automate
 2. **Numerical Modifier Tags**: Explicit `TAG: [n]` expressions (`ATK:`, `@ATK:`, `DEF:`, `CHECK:`, `SKILL:`, `INIT:`, `SAVE:`, `SAVEDC:`, `DMG:`, `@DMG:`) that add or subtract flat values on matching rolls.
 3. **Visual Marker Conditions**: Presets shown in the Combat Tracker and as token status widgets without changing roll totals on their own. Pair a visual condition with a numerical modifier tag whenever you want an automated EML or damage adjustment.
 
-```text
-+-----------------------------------------------------------------------+
-|                       COMBAT TRACKER EFFECT                           |
-+-------------------------+----------------------+----------------------+
-|  Automated Conditions   |  Numerical Modifiers |    Visual Markers    |
-|  (Prone, Moonlight,     |  (ATK, @ATK, DEF,    |  (Blinded, Stunned,  |
-|   COVER, Unconscious)   |   CHECK, SKILL, DMG) |   Invisible, Bleed)  |
-+-------------------------+----------------------+----------------------+
-|  Adjust EML, CRW cover, |  Add/subtract flat   |  Token icon & CT     |
-|  turn skip, or recovery |  values on matching  |  reminder; pair with |
-|  states automatically.    |  rolls.              |  tags for EML mods.  |
-+-------------------------+----------------------+----------------------+
-```
-
 !!! tip "Effects Presets Window"
     Open the **Effects** sidebar window to drag and drop **LIGHTS** (token vision), **LIGHT CONDITIONS** (*Moonlight*, *Starlight*, *Near Darkness*), and **CONDITIONS** directly onto Combat Tracker entries without typing syntax manually.
 
