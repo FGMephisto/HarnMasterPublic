@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -831,8 +831,12 @@
 </code></pre></div>
 <hr />
 <h2 id="2-automated-engine-effects-keywords">2. Automated Engine Effects &amp; Keywords<a class="headerlink" href="#2-automated-engine-effects-keywords" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Effects Presets Window</p>
+<p>You can apply standard conditions and ambient light levels (<em>Moonlight</em>, <em>Starlight</em>, <em>Near Darkness</em>) without typing effect strings manually by dragging presets directly from the <strong>Effects</strong> sidebar window onto any Combat Tracker entry.</p>
+</div>
 <h3 id="a-core-supported-conditions">A. Core Supported Conditions<a class="headerlink" href="#a-core-supported-conditions" title="Permanent link">&para;</a></h3>
-<p>These conditions are registered in the ruleset engine (<code>DataCommon.conditions</code>) and have direct mechanical automation or dedicated token status icons:</p>
+<p>These conditions are built into the ruleset engine and have direct mechanical automation or dedicated token status icons:</p>
 <table>
 <thead>
 <tr>
@@ -937,6 +941,21 @@
 <td style="text-align: left;">Informational condition tag for bloodloss tracking.</td>
 <td style="text-align: left;"><code>cond_bleed</code></td>
 </tr>
+<tr>
+<td style="text-align: left;"><strong>Moonlight</strong></td>
+<td style="text-align: left;">Light condition: -10 EML penalty in the dark to attacks, defenses, and Eyesight attribute checks (other skill checks left to GM discretion). Nocturnal creatures (like Gargun) exempt.</td>
+<td style="text-align: left;"><code>cond_conceal</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Starlight</strong></td>
+<td style="text-align: left;">Light condition: -20 EML penalty in the dark to attacks, defenses, and Eyesight attribute checks (other skill checks left to GM discretion). Nocturnal creatures exempt.</td>
+<td style="text-align: left;"><code>cond_conceal</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Near Darkness</strong></td>
+<td style="text-align: left;">Light condition: -30 EML penalty (some faint light, not pitch black) to attacks, defenses, and Eyesight attribute checks (other skill checks left to GM discretion). Nocturnal creatures exempt.</td>
+<td style="text-align: left;"><code>cond_conceal</code></td>
+</tr>
 </tbody>
 </table>
 <hr />
@@ -990,10 +1009,10 @@
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!NOTE]
-Numerical modifiers in FGU effect strings must always be flat integers (e.g. <code>CHECK: -20</code>). Formula expressions, percentages, or division operators like <code>CHECK: /2</code> or <code>SPEED: /2</code> are <strong>not supported</strong> by the FGU effect parser.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Flat Integer Modifiers Only</p>
+<p>Numerical modifiers in FGU effect strings must always be flat integers (e.g. <code>CHECK: -20</code>). Formula expressions, percentages, or division operators like <code>CHECK: /2</code> or <code>SPEED: /2</code> are <strong>not supported</strong> by the FGU effect parser.</p>
+</div>
 <hr />
 <h3 id="c-tactical-conditional-effect-tags">C. Tactical &amp; Conditional Effect Tags<a class="headerlink" href="#c-tactical-conditional-effect-tags" title="Permanent link">&para;</a></h3>
 <table>
@@ -1407,7 +1426,7 @@ Numerical modifiers in FGU effect strings must always be flat integers (e.g. <co
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>
